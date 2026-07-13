@@ -46,7 +46,7 @@ export const siteConfig = {
     {
       title: "LES SALAMANDRES",
       subtitle: "Sports Américains au Havre",
-      image: "/public/photos/pexels-chuck-8840820.jpg",
+      image: "/public/photos/football2.jpg",
       cta: "Rejoins l'équipe",
     },
     {

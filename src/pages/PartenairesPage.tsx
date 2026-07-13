@@ -17,28 +17,21 @@ const partners = [
     website: "https://fffa.org",
   },
   {
-    name: "Decathlon Le Havre",
-    description: "Partenaire matériel, équipements sportifs et soutien logistique pour nos athlètes.",
-    tier: "Argent",
-    website: "https://decathlon.fr",
-  },
-  {
     name: "Normandie Sport",
     description: "Soutien au développement du sport en Normandie et promotion des disciplines américaines.",
     tier: "Argent",
-    website: "#",
+    website: "https://www.normandie.fr/sport",
   },
   {
     name: "Ville du Havre - Service Sports",
     description: "Accès aux infrastructures municipales et subventions pour le développement de l'association.",
     tier: "Or",
-    website: "https://lehavre.fr/sports",
+    website: "https://www.lehavreseinemetropole.fr/amonservice/theme/culture-sports-loisirs",
   },
   {
-    name: "Crossfit Le Havre",
-    description: "Partenariat pour la préparation physique des joueurs et l'entretien sportif en dehors des entraînements.",
-    tier: "Bronze",
-    website: "#",
+    name: "Ligue de Normandie (LNFA)",
+    description: "La Ligue de Normandie de Football Américain, Flag et Cheerleading est l'organisme régional réprésentant la Fédération Française de Football Américain (FFFA)",
+    website: "https://lnfafc.assoconnect.com/page/3336678-a-propos",
   },
 ];
 
