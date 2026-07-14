@@ -154,12 +154,12 @@ export function HomePage() {
               REJOINS LES<br />SALAMANDRES
             </h2>
             <p className="text-white/70 text-lg max-w-xl mx-auto mb-10 font-subheading font-light">
-              Que tu veuisses jouer, cheer ou simplement vivre la ambiance,
+              Joueur, cheerleader, bénévole ou spectateur venu pour vivre l'ambiance,
               il y a une place pour toi chez nous.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Link
-                to="/contact"
+                to="/inscription"
                 className="btn-primary group"
               >
                 S'inscrire maintenant

@@ -12,6 +12,7 @@ import { ContactPage } from "@/pages/ContactPage";
 import { MentionsLegalesPage } from "@/pages/MentionsLegalesPage";
 import { PolitiqueConfidentialitePage } from "@/pages/PolitiqueConfidentialitePage";
 import { NotFoundPage } from "@/pages/NotFoundPage";
+import { InscriptionPage } from "@/pages/InscriptionPage";
 
 export default function App() {
   return (
@@ -27,6 +28,7 @@ export default function App() {
           <Route path="/boutique" element={<BoutiquePage />} />
           <Route path="/partenaires" element={<PartenairesPage />} />
           <Route path="/contact" element={<ContactPage />} />
+          <Route path="/inscription" element={<InscriptionPage />} />
           <Route path="/mentions-legales" element={<MentionsLegalesPage />} />
           <Route path="/politique-de-confidentialite" element={<PolitiqueConfidentialitePage />} />
           <Route path="*" element={<NotFoundPage />} />

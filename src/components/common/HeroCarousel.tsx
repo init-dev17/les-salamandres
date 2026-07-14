@@ -39,9 +39,9 @@ export function HeroCarousel() {
           </div>
 
           {/* Content */}
-          <div className="relative z-20 h-full flex items-center">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-              <div className="max-w-2xl">
+          <div className="relative z-20 h-full flex items-center max-lg:justify-center">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full max-lg:text-center">
+              <div className="max-w-2xl max-lg:mx-auto">
                 <span className="inline-block font-subheading text-packer-gold text-sm tracking-[0.4em] uppercase mb-4 animate-fade-in">
                   {siteConfig.location}
                 </span>
@@ -53,7 +53,7 @@ export function HeroCarousel() {
                 </p>
                 <Link
                   to={slide.link}
-                  className="btn-primary group"
+                  className="btn-primary group max-lg:mx-auto"
                 >
                   {slide.cta}
                   <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />

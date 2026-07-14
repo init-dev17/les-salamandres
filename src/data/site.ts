@@ -1,6 +1,6 @@
 export const siteConfig = {
   name: "Les Salamandres",
-  location: "Le Havre, France",
+  location: "Le Havre - France",
   description: "Association de sports américains au Havre — Football américain, Flag Football, Cheerleading & Baseball.",
   social: {
     instagram: "https://www.instagram.com/salamandres_lh/",

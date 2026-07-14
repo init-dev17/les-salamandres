@@ -31,6 +31,7 @@ export function Navbar() {
       ],
     },
     { to: "/boutique", label: "Boutique" },
+    { to: "/inscription", label: "Inscriptions" },
     { to: "/partenaires", label: "Partenaires" },
     { to: "/contact", label: "Contact" },
   ];
@@ -52,7 +53,7 @@ export function Navbar() {
             <img
               src="/photos/logo-salavec.png"
               alt="Les Salamandres"
-              className="h-12 w-25 object-contain rounded-full group-hover:scale-110 transition-transform"
+              className="h-14 w-25 object-contain rounded-full group-hover:scale-110 transition-transform"
             />
             <div className="hidden sm:block">
               <span className="font-heading text-2xl text-packer-gold tracking-wider">

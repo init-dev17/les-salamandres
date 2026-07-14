@@ -7,31 +7,37 @@ const partners = [
   {
     name: "Mairie du Havre",
     description: "Soutien institutionnel et mise à disposition d'installations sportives pour les entraînements et matchs.",
-    tier: "Or",
+    tier: "Institutionnel",
     website: "https://lehavre.fr",
+    logo: "/photos/partenaires/Ville-du-Havre.png",
   },
   {
     name: "FFFA - Fédération Française de Football Américain",
     description: "Organisation des championnats nationaux et encadrement des équipes licenciées.",
-    tier: "Fédération",
+    tier: "Institutionnel",
     website: "https://fffa.org",
+    logo: "/photos/partenaires/FFFA.png",
   },
   {
     name: "Normandie Sport",
     description: "Soutien au développement du sport en Normandie et promotion des disciplines américaines.",
-    tier: "Argent",
+    tier: "Institutionnel",
     website: "https://www.normandie.fr/sport",
+    logo: "/photos/partenaires/Normandie sport.png",
   },
   {
     name: "Ville du Havre - Service Sports",
     description: "Accès aux infrastructures municipales et subventions pour le développement de l'association.",
-    tier: "Or",
+    tier: "Institutionnel",
     website: "https://www.lehavreseinemetropole.fr/amonservice/theme/culture-sports-loisirs",
+    logo: "/photos/partenaires/Ville-du-Havre.png",
   },
   {
     name: "Ligue de Normandie (LNFA)",
     description: "La Ligue de Normandie de Football Américain, Flag et Cheerleading est l'organisme régional réprésentant la Fédération Française de Football Américain (FFFA)",
+    tier: "Institutionnel",
     website: "https://lnfafc.assoconnect.com/page/3336678-a-propos",
+    logo: "/photos/partenaires/LNFA.png",
   },
 ];
 
@@ -39,6 +45,7 @@ const tierColors: Record<string, string> = {
   Or: "bg-packer-gold text-packer-green",
   Argent: "bg-gray-300 text-gray-800",
   Bronze: "bg-orange-700 text-white",
+  Institutionnel: "bg-packer-green text-white",
   Fédération: "bg-packer-green text-white",
 };
 
@@ -70,6 +77,17 @@ export function PartenairesPage() {
                 viewport={{ once: true }}
                 className="bg-salamandre-gray rounded-2xl p-8 hover:shadow-lg transition-all duration-300 relative overflow-hidden group"
               >
+                {/* Logo */}
+                {partner.logo && (
+                  <div className="mb-6 flex items-center justify-center h-24">
+                    <img
+                      src={partner.logo}
+                      alt={`Logo ${partner.name}`}
+                      className="max-h-full max-w-full object-contain"
+                    />
+                  </div>
+                )}
+
                 {/* Tier Badge */}
                 <div className={`inline-block px-3 py-1 rounded-full text-xs font-subheading tracking-wider mb-4 ${tierColors[partner.tier ?? ""] ?? ""}`}>
                   {partner.tier}
@@ -108,7 +126,7 @@ export function PartenairesPage() {
           />
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="mailto:partenariat@les-salamandres.fr"
+              href="mailto:salamandres.club@gmail.com"
               className="btn-primary"
             >
               <Mail className="w-4 h-4" />

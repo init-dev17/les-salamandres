@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { Mail, Phone, MapPin, Send, Clock } from "lucide-react";
+import { Mail, MapPin, Send, Clock } from "lucide-react";
 import { InstagramIcon, YoutubeIcon, FacebookIcon, TiktokIcon } from "@/components/common/SocialIcons";
 import { PageHero } from "@/components/common/PageHero";
 import { SectionTitle } from "@/components/common/SectionTitle";
@@ -153,21 +153,21 @@ export function ContactPage() {
                       Email
                     </h4>
                     <a href="mailto:contact@les-salamandres.fr" className="font-body text-packer-green hover:text-packer-gold transition-colors">
-                      contact@les-salamandres.fr
+                      salamandres.club@gmail.com
                     </a>
                   </div>
                 </div>
 
                 <div className="flex items-start gap-4">
                   <div className="w-12 h-12 bg-packer-gold/10 rounded-xl flex items-center justify-center shrink-0">
-                    <Phone className="w-6 h-6 text-packer-gold" />
+                    <svg className="w-6 h-6 text-packer-gold" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
                   </div>
                   <div>
                     <h4 className="font-subheading text-sm text-packer-green/40 tracking-[0.2em] uppercase mb-1">
-                      Téléphone
+                      Instagram
                     </h4>
-                    <a href="tel:+33600000000" className="font-body text-packer-green hover:text-packer-gold transition-colors">
-                      06 00 00 00 00
+                    <a href="https://www.instagram.com/salamandres_lh/" target="_blank" rel="noopener noreferrer" className="font-body text-packer-green hover:text-packer-gold transition-colors">
+                      @Salamandres_LH
                     </a>
                   </div>
                 </div>
@@ -243,7 +243,7 @@ export function ContactPage() {
       <section className="h-96 bg-packer-green/10 relative">
         <iframe
           title="Localisation Les Salamandres"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d41579.40904368468!2d0.08039655!3d49.4943701!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e0023f1c4e304d%3A0x406cdd6942a13d0!2sLe%20Havre!5e0!3m2!1sfr!2sfr!4v1"
+          src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2589.9526190470847!2d0.0855586!3d49.5231702!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e028ab7eaaaaab%3A0x48372f90d919cab7!2sStade%20Youri%20Gagarine!5e0!3m2!1sfr!2sfr!4v1784040545332!5m2!1sfr!2sfr"
           className="w-full h-full border-0"
           allowFullScreen
           loading="lazy"
