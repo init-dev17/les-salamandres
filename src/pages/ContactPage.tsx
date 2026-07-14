@@ -20,7 +20,7 @@ export function ContactPage() {
       <PageHero
         title="CONTACT"
         subtitle="Rejoignez-nous"
-        image="/public/photos/lh.jpg"
+        image="/photos/lh.jpg"
       />
 
       <section className="py-20 sm:py-28 bg-white">

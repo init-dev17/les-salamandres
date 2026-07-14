@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { ChevronRight, Users, Trophy, Calendar, MapPin } from "lucide-react";
+import { ChevronRight, Users, Calendar, MapPin } from "lucide-react";
 import { HeroCarousel } from "@/components/common/HeroCarousel";
 import { SportCard } from "@/components/common/SportCard";
 import { SectionTitle } from "@/components/common/SectionTitle";
