@@ -40,12 +40,12 @@ export function HeroCarousel() {
 
           {/* Content */}
           <div className="relative z-20 h-full flex items-center max-lg:justify-center">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full max-lg:text-center">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-22 xl:px-26 w-full max-lg:text-center">
               <div className="max-w-2xl max-lg:mx-auto">
                 <span className="inline-block font-subheading text-packer-gold text-sm tracking-[0.4em] uppercase mb-4 animate-fade-in">
                   {siteConfig.location}
                 </span>
-                <h1 className="font-heading text-6xl sm:text-7xl lg:text-8xl xl:text-9xl text-white leading-[0.9] mb-6 tracking-wider">
+                <h1 className="font-heading text-6xl sm:text-7xl lg:text-8xl text-white leading-[0.9] mb-6 tracking-wider">
                   {slide.title}
                 </h1>
                 <p className="font-subheading text-xl sm:text-2xl text-white/80 mb-8 tracking-wide font-light">
