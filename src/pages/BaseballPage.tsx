@@ -5,7 +5,7 @@ export function BaseballPage() {
     <SportPage
       title="BASEBALL"
       subtitle="Discipline"
-      heroImage="/public/photos/baseball.jpg"
+      heroImage="/photos/baseball.jpg"
       description="Le baseball, un classique incontournable du sport américain, trouve sa place au sein de l'association Les Salamandres. Précision du lancer, stratégie de jeu et esprit d'équipe sont les piliers de cette discipline. Notre équipe évolue en championnat régional et offre une atmosphère conviviale et compétitive aux joueurs de tous niveaux."
       schedule="Samedi 10h-13h & Dimanche 14h-17h"
       category="Seniors"
@@ -44,7 +44,7 @@ export function BaseballPage() {
       ]}
       galleryImages={[
         "https://images.unsplash.com/photo-1529768167801-9173d94c2a42?w=800&q=80",
-        "https://images.unsplash.com/photo-1562077772-3bd90f2b048c?w=800&q=80",
+        "/photos/baseball3.jpg",
         "https://images.unsplash.com/photo-1471295253337-3ceaaedca402?w=800&q=80",
         "https://images.unsplash.com/photo-1461896836934-bd45ba8a0bca?w=800&q=80",
       ]}

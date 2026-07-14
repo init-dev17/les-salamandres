@@ -71,7 +71,7 @@ export function PartenairesPage() {
                 className="bg-salamandre-gray rounded-2xl p-8 hover:shadow-lg transition-all duration-300 relative overflow-hidden group"
               >
                 {/* Tier Badge */}
-                <div className={`inline-block px-3 py-1 rounded-full text-xs font-subheading tracking-wider mb-4 ${tierColors[partner.tier] || ""}`}>
+                <div className={`inline-block px-3 py-1 rounded-full text-xs font-subheading tracking-wider mb-4 ${tierColors[partner.tier ?? ""] ?? ""}`}>
                   {partner.tier}
                 </div>
 

@@ -7,8 +7,8 @@ export function CheerleadingPage() {
       subtitle="Discipline"
       heroImage="/photos/cheer6.jpg"
       description="Le cheerleading chez Les Salamandres, c'est le mélange parfait entre sport et spectacle. Acrobies aériennes, chorégraphies énergiques et esprit d'équipe sont au programme. Notre équipe de cheerleaders accompagne les équipes de football lors des matchs et se produit lors de compétitions et événements. Un sport exigeant qui développe force, souplesse et confiance en soi."
-      schedule="Lundi & Vendredi 18h-20h30"
-      category=" Shine, Sparkles & Snakes"
+      schedule="Mardi, Mercredi, Vendredi"
+      category=" Minimes, Cadets, Juniors & Séniors"
       ages="À partir de 7 ans"
       highlights={[
         {

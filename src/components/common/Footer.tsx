@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Mail, MapPin, Phone } from "lucide-react";
-import { InstagramIcon, YoutubeIcon, FacebookIcon } from "./SocialIcons";
+import { InstagramIcon, YoutubeIcon, FacebookIcon, TiktokIcon } from "./SocialIcons";
 import { siteConfig } from "@/data/site";
 
 export function Footer() {
@@ -45,6 +45,15 @@ export function Footer() {
                 aria-label="Facebook"
               >
                 <FacebookIcon className="w-5 h-5" />
+              </a>
+              <a
+                href={siteConfig.social.tiktok}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-packer-gold hover:text-packer-green transition-all"
+                aria-label="TikTok"
+              >
+                <TiktokIcon className="w-5 h-5" />
               </a>
             </div>
           </div>

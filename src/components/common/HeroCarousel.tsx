@@ -52,7 +52,7 @@ export function HeroCarousel() {
                   {slide.subtitle}
                 </p>
                 <Link
-                  to="/contact"
+                  to={slide.link}
                   className="btn-primary group"
                 >
                   {slide.cta}

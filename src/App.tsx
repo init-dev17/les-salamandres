@@ -1,5 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Layout } from "@/components/common/Layout";
+import { ScrollToTop } from "@/components/common/ScrollToTop";
 import { HomePage } from "@/pages/HomePage";
 import { FootballUSPage } from "@/pages/FootballUSPage";
 import { FlagFootballPage } from "@/pages/FlagFootballPage";
@@ -15,6 +16,7 @@ import { NotFoundPage } from "@/pages/NotFoundPage";
 export default function App() {
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <Routes>
         <Route element={<Layout />}>
           <Route path="/" element={<HomePage />} />

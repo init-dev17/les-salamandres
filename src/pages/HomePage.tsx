@@ -7,10 +7,10 @@ import { SectionTitle } from "@/components/common/SectionTitle";
 import { siteConfig } from "@/data/site";
 
 const stats = [
-  { icon: Users, label: "Membres actifs", value: "120+" },
-  { icon: Trophy, label: "Saisons jouées", value: "8" },
-  { icon: Calendar, label: "Matchs cette saison", value: "24" },
-  { icon: MapPin, label: "Ville", value: "Le Havre" },
+  { icon: Users, label: "Nombre de licenciés", value: "140+" },
+  { icon: Calendar, label: "Depuis", value: "1990" },
+  { icon: Users, label: "Bénévoles", value: "30" },
+  { icon: MapPin, label: "Normandie, France", value: "Le Havre" },
 ];
 
 export function HomePage() {
@@ -32,12 +32,13 @@ export function HomePage() {
               >
                 <stat.icon className="w-8 h-8 text-packer-gold shrink-0" />
                 <div>
-                  <span className="font-heading text-3xl sm:text-4xl text-white tracking-wider block leading-none">
-                    {stat.value}
-                  </span>
                   <span className="font-subheading text-xs text-white/50 tracking-[0.2em] uppercase">
                     {stat.label}
                   </span>
+                  <span className="font-heading text-3xl sm:text-4xl text-white tracking-wider block leading-none">
+                    {stat.value}
+                  </span>
+                  
                 </div>
               </div>
             ))}
@@ -116,7 +117,7 @@ export function HomePage() {
                 <div
                   className="absolute inset-0 bg-cover bg-center"
                   style={{
-                    backgroundImage: "url(https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=800&q=80)",
+                    backgroundImage: "url(/photos/foot-senior3.jpg)",
                   }}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-packer-green-dark/60 to-transparent" />
@@ -195,7 +196,7 @@ export function HomePage() {
               <div
                 className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
                 style={{
-                  backgroundImage: "url(/public/photos/foot-senior2.jpg)",
+                  backgroundImage: "url(/photos/foot-senior2.jpg)",
                 }}
               />
               <div className="absolute inset-0 bg-packer-green-dark/40 group-hover:bg-packer-green-dark/20 transition-colors" />
@@ -219,7 +220,7 @@ export function HomePage() {
               <div
                 className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
                 style={{
-                  backgroundImage: "url(/public/photos/cheer5.jpg)",
+                  backgroundImage: "url(/photos/cheer5.jpg)",
                 }}
               />
               <div className="absolute inset-0 bg-packer-green-dark/40 group-hover:bg-packer-green-dark/20 transition-colors" />

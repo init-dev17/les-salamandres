@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X, ChevronDown } from "lucide-react";
-import { InstagramIcon, YoutubeIcon } from "./SocialIcons";
+import { InstagramIcon, YoutubeIcon, FacebookIcon, TiktokIcon } from "./SocialIcons";
 import { siteConfig } from "@/data/site";
 
 export function Navbar() {
@@ -55,12 +55,12 @@ export function Navbar() {
               className="h-12 w-25 object-contain rounded-full group-hover:scale-110 transition-transform"
             />
             <div className="hidden sm:block">
-              <span className="font-heading text-2xl text-white tracking-wider">
+              <span className="font-heading text-2xl text-packer-gold tracking-wider">
                 LES SALAMANDRES
               </span>
-              <span className="block text-xs text-packer-gold font-subheading tracking-[0.3em]">
+              {/* <span className="block text-xs text-white font-subheading tracking-[0.3em]">
                 LE HAVRE
-              </span>
+              </span> */}
             </div>
           </Link>
 
@@ -129,6 +129,24 @@ export function Navbar() {
               aria-label="YouTube"
             >
               <YoutubeIcon className="w-5 h-5" />
+            </a>
+            <a
+              href={siteConfig.social.facebook}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-2 text-white hover:text-packer-gold transition-colors"
+              aria-label="Facebook"
+            >
+              <FacebookIcon className="w-5 h-5" />
+            </a>
+            <a
+              href={siteConfig.social.tiktok}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-2 text-white hover:text-packer-gold transition-colors"
+              aria-label="TikTok"
+            >
+              <TiktokIcon className="w-5 h-5" />
             </a>
             <button
               onClick={() => setIsOpen(!isOpen)}

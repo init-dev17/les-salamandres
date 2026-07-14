@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { Mail, Phone, MapPin, Send, Clock } from "lucide-react";
-import { InstagramIcon, YoutubeIcon, FacebookIcon } from "@/components/common/SocialIcons";
+import { InstagramIcon, YoutubeIcon, FacebookIcon, TiktokIcon } from "@/components/common/SocialIcons";
 import { PageHero } from "@/components/common/PageHero";
 import { SectionTitle } from "@/components/common/SectionTitle";
 import { siteConfig } from "@/data/site";
@@ -221,6 +221,15 @@ export function ContactPage() {
                       aria-label="Facebook"
                     >
                       <FacebookIcon className="w-5 h-5" />
+                    </a>
+                    <a
+                      href={siteConfig.social.tiktok}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="w-12 h-12 bg-salamandre-gray rounded-xl flex items-center justify-center text-packer-green hover:bg-packer-gold hover:text-packer-green transition-all"
+                      aria-label="TikTok"
+                    >
+                      <TiktokIcon className="w-5 h-5" />
                     </a>
                   </div>
                 </div>
