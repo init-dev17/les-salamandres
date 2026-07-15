@@ -202,7 +202,7 @@ export function HomePage() {
               href={siteConfig.social.instagram}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 text-packer-gold font-subheading text-sm tracking-[0.2em] uppercase hover:gap-4 transition-all"
+              className="btn-outline"
             >
               Voir plus sur Instagram
               <ChevronRight className="w-4 h-4" />

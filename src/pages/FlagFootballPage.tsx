@@ -28,7 +28,7 @@ export function FlagFootballPage() {
           description: "Des équipes mixtes pour favoriser l'inclusion. Les hommes et les femmes jouent ensemble sur le même terrain.",
         },
         {
-          icon: "🎯",
+          icon: "/photos/JO512-3.png",
           title: "Compétitions",
           description: "Participe à des tournois régionaux et nationaux. Représente les Salamandres avec fierté sur le terrain.",
         },

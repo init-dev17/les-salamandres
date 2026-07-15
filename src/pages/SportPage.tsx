@@ -126,7 +126,11 @@ export function SportPage({
                 className="bg-white rounded-2xl p-8 shadow-sm hover:shadow-lg transition-shadow duration-300"
               >
                 <div className="flex items-center gap-3 sm:block sm:gap-0 sm:mb-4">
-                  <span className="text-4xl sm:mb-0">{item.icon}</span>
+                  {item.icon.startsWith("/") ? (
+                    <img src={item.icon} alt="" className="w-16 h-16 object-contain sm:mb-0" />
+                  ) : (
+                    <span className="text-4xl sm:mb-0">{item.icon}</span>
+                  )}
                   <h3 className="font-heading text-2xl text-packer-green tracking-wider sm:mb-3">
                     {item.title}
                   </h3>
