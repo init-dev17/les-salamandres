@@ -42,14 +42,14 @@ export function FootballUSPage() {
           description: "Au-delà du terrain, nous sommes une famille. Soirées, événements et moments de partage tout au long de la saison.",
         },
       ]}
+      instagramUrl="https://www.instagram.com/reel/DTvjoSvAv8W/"
       galleryImages={[
         "/photos/foot2.jpg",
         "/photos/foot-senior3.jpg",
         "/photos/foot-senior2.jpg",
-        "/photos/foot-timeout.jpg",
         "/photos/foot1.jpg",
-        "/photos/foot3.jpg",
         "/photos/foot-couloir.jpg",
+        "/photos/foot3.jpg",
       ]}
     />
   );

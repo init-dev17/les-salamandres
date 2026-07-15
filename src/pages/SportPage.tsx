@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
+import { InstagramEmbed } from "react-social-media-embed";
 import { ChevronRight, Clock, Users, MapPin, Trophy } from "lucide-react";
 import { PageHero } from "@/components/common/PageHero";
 import { SectionTitle } from "@/components/common/SectionTitle";
@@ -14,6 +15,7 @@ interface SportPageProps {
   ages?: string;
   highlights: { icon: string; title: string; description: string }[];
   galleryImages: string[];
+  instagramUrl?: string;
   accentColor?: string;
 }
 
@@ -27,6 +29,7 @@ export function SportPage({
   ages,
   highlights,
   galleryImages,
+  instagramUrl = "https://www.instagram.com/reel/DJoBItUiHVk/",
 }: SportPageProps) {
   return (
     <>
@@ -141,21 +144,50 @@ export function SportPage({
             title="NOS MOMENTS"
           />
           <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-            {galleryImages.slice(1).map((img, i) => (
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.5 }}
+              viewport={{ once: true }}
+              className="rounded-2xl overflow-hidden md:col-span-2 md:row-span-2"
+            >
+              <div
+                className="w-full h-full aspect-square bg-cover bg-center hover:scale-105 transition-transform duration-700"
+                style={{ backgroundImage: `url(${galleryImages[1]})` }}
+              />
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+              viewport={{ once: true }}
+              className="rounded-2xl overflow-hidden flex items-center justify-center"
+            >
+              <InstagramEmbed url={instagramUrl} width={328} />
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              viewport={{ once: true }}
+              className="rounded-2xl overflow-hidden"
+            >
+              <div
+                className="w-full aspect-video bg-cover bg-center hover:scale-105 transition-transform duration-700"
+                style={{ backgroundImage: `url(${galleryImages[2]})` }}
+              />
+            </motion.div>
+            {galleryImages.slice(3).map((img, i) => (
               <motion.div
                 key={i}
                 initial={{ opacity: 0, scale: 0.95 }}
                 whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.5, delay: i * 0.05 }}
+                transition={{ duration: 0.5, delay: (i + 3) * 0.05 }}
                 viewport={{ once: true }}
-                className={`rounded-2xl overflow-hidden ${
-                  i === 0 ? "md:col-span-2 md:row-span-2" : ""
-                }`}
+                className="rounded-2xl overflow-hidden"
               >
                 <div
-                  className={`w-full bg-cover bg-center hover:scale-105 transition-transform duration-700 ${
-                    i === 0 ? "aspect-square" : "aspect-video"
-                  }`}
+                  className="w-full aspect-video bg-cover bg-center hover:scale-105 transition-transform duration-700"
                   style={{ backgroundImage: `url(${img})` }}
                 />
               </motion.div>

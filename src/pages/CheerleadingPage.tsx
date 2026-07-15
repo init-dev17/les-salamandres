@@ -42,6 +42,7 @@ export function CheerleadingPage() {
           description: "Confiance en soi, discipline et travail en équipe. Le cheerleading transforme autant sur le plan personnel que sportif.",
         },
       ]}
+      instagramUrl="https://www.instagram.com/reel/DYKwfGFRLsH/"
       galleryImages={[
         "/photos/cheer5.jpg",
         "/photos/cheer.jpg",

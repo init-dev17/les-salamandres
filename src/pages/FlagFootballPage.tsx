@@ -42,6 +42,7 @@ export function FlagFootballPage() {
           description: "Le flag football est une excellente porte d'entrée vers le football américain pour ceux qui souhaitent découvrir le tackle.",
         },
       ]}
+      instagramUrl="https://www.instagram.com/reel/DJUM7sGiCoB/"
       galleryImages={[
         "/photos/flag4.jpg",
         "/photos/flag3.jpg",
