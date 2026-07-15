@@ -42,7 +42,7 @@ export function BaseballPage() {
           description: "Pas besoin d'expérience pour commencer. Nos entraîneurs encadrent les débutants et perfectionnent les joueurs confirmés.",
         },
       ]}
-      instagramUrl="https://www.instagram.com/reel/DV4T4zPiPKI/"
+      instagramUrl="https://www.instagram.com/reel/DSlq05rAipK/"
       galleryImages={[
         "https://images.unsplash.com/photo-1529768167801-9173d94c2a42?w=800&q=80",
         "/photos/baseball3.jpg",
