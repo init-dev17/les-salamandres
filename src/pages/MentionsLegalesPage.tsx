@@ -1,4 +1,5 @@
 import { PageHero } from "@/components/common/PageHero";
+import { siteConfig } from "@/data/site";
 
 export function MentionsLegalesPage() {
   return (
@@ -59,7 +60,7 @@ export function MentionsLegalesPage() {
                 <li>Droit d'opposition</li>
               </ul>
               <p>
-                Pour exercer ces droits, contactez-nous à : <a href="mailto:contact@les-salamandres.fr" className="text-packer-gold hover:underline">contact@les-salamandres.fr</a>
+                Pour exercer ces droits, contactez-nous à : <a href={`mailto:${siteConfig.social.emailClub}`} className="text-packer-gold hover:underline">{siteConfig.social.emailClub}</a>
               </p>
             </div>
 
@@ -95,7 +96,7 @@ export function MentionsLegalesPage() {
             <div className="text-packer-green/70 font-body leading-relaxed">
               <p>
                 Pour toute question relative aux mentions légales, contactez-nous à :<br />
-                <a href="mailto:contact@les-salamandres.fr" className="text-packer-gold hover:underline">contact@les-salamandres.fr</a>
+                <a href={`mailto:${siteConfig.social.emailClub}`} className="text-packer-gold hover:underline">{siteConfig.social.emailClub}</a>
               </p>
             </div>
           </div>

@@ -17,6 +17,7 @@ interface SportPageProps {
   galleryImages: string[];
   instagramUrl?: string;
   location?: string;
+  titleIcon?: string;
   accentColor?: string;
 }
 
@@ -32,10 +33,11 @@ export function SportPage({
   galleryImages,
   instagramUrl = "https://www.instagram.com/reel/DJoBItUiHVk/",
   location: sportLocation = "Le Havre",
+  titleIcon,
 }: SportPageProps) {
   return (
     <>
-      <PageHero title={title} subtitle={subtitle} image={heroImage} />
+      <PageHero title={title} subtitle={subtitle} image={heroImage} titleIcon={titleIcon} />
 
       {/* Info Bar */}
       <section className="bg-packer-green">

@@ -6,6 +6,7 @@ export function FlagFootballPage() {
       title="FLAG FOOTBALL"
       subtitle="Discipline"
       heroImage="/photos/flag5.jpg"
+      titleIcon="/photos/JO512-2.png"
       description="Le flag football est la version sans contact du football américain. Accessible à tous, il développe les mêmes qualités techniques et tactiques tout en étant plus sûr. C'est le sport idéal pour débuter ou pour jouer en toute convivialité. L'association propose des équipes mixtes et des participations à des tournois regionaux et nationaux."
       schedule="Mardi & Vendredi"
       category="Mixte - Tous niveaux"

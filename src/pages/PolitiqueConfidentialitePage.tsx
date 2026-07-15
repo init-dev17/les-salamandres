@@ -1,4 +1,5 @@
 import { PageHero } from "@/components/common/PageHero";
+import { siteConfig } from "@/data/site";
 
 export function PolitiqueConfidentialitePage() {
   return (
@@ -68,7 +69,7 @@ export function PolitiqueConfidentialitePage() {
                 <li><strong>Droit d'opposition</strong> : vous opposer au traitement de vos données</li>
               </ul>
               <p>
-                Pour exercer ces droits, contactez-nous à : <a href="mailto:contact@les-salamandres.fr" className="text-packer-gold hover:underline">contact@les-salamandres.fr</a>
+                Pour exercer ces droits, contactez-nous à : <a href={`mailto:${siteConfig.social.emailClub}`} className="text-packer-gold hover:underline">{siteConfig.social.emailClub}</a>
               </p>
             </div>
 
@@ -83,7 +84,7 @@ export function PolitiqueConfidentialitePage() {
             <div className="text-packer-green/70 font-body leading-relaxed">
               <p>
                 Pour toute question relative à la protection de vos données personnelles, contactez-nous à :<br />
-                <a href="mailto:contact@les-salamandres.fr" className="text-packer-gold hover:underline">contact@les-salamandres.fr</a>
+                <a href={`mailto:${siteConfig.social.emailClub}`} className="text-packer-gold hover:underline">{siteConfig.social.emailClub}</a>
               </p>
               <p>
                 Vous pouvez également adresser une réclamation à la CNIL : <a href="https://www.cnil.fr" target="_blank" rel="noopener noreferrer" className="text-packer-gold hover:underline">www.cnil.fr</a>

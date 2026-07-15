@@ -2,9 +2,10 @@ interface PageHeroProps {
   title: string;
   subtitle?: string;
   image: string;
+  titleIcon?: string;
 }
 
-export function PageHero({ title, subtitle, image }: PageHeroProps) {
+export function PageHero({ title, subtitle, image, titleIcon }: PageHeroProps) {
   return (
     <section className="relative h-[50vh] sm:h-[60vh] flex items-end overflow-hidden">
       <div
@@ -19,8 +20,9 @@ export function PageHero({ title, subtitle, image }: PageHeroProps) {
             {subtitle}
           </span>
         )}
-        <h1 className="font-heading text-5xl sm:text-6xl lg:text-7xl xl:text-8xl text-white tracking-wider leading-[0.9]">
+        <h1 className="font-heading text-5xl sm:text-6xl lg:text-7xl xl:text-8xl text-white tracking-wider leading-[0.9] flex items-center gap-4">
           {title}
+          {titleIcon && <img src={titleIcon} alt="" className="h-[53px] w-[53px] sm:h-[70px] sm:w-[70px] lg:h-[88px] lg:w-[88px] object-contain" />}
         </h1>
         <div className="w-24 h-1 bg-packer-gold mt-6" />
       </div>
