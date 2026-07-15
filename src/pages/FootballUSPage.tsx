@@ -44,6 +44,7 @@ export function FootballUSPage() {
       ]}
       galleryImages={[
         "/photos/foot2.jpg",
+        "/photos/foot-senior3.jpg",
         "/photos/foot-senior2.jpg",
         "/photos/foot-timeout.jpg",
         "/photos/foot1.jpg",

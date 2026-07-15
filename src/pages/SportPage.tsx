@@ -141,7 +141,7 @@ export function SportPage({
             title="NOS MOMENTS"
           />
           <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-            {galleryImages.map((img, i) => (
+            {galleryImages.slice(1).map((img, i) => (
               <motion.div
                 key={i}
                 initial={{ opacity: 0, scale: 0.95 }}

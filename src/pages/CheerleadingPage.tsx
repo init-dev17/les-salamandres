@@ -43,9 +43,8 @@ export function CheerleadingPage() {
         },
       ]}
       galleryImages={[
-        "/photos/cheer.jpg",
-        "/photos/cheer2.jpg",
         "/photos/cheer5.jpg",
+        "/photos/cheer.jpg",
         "/photos/cheer4.jpg",
         "/photos/cheer7.jpg",
       ]}

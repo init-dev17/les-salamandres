@@ -43,10 +43,10 @@ export function FlagFootballPage() {
         },
       ]}
       galleryImages={[
-        "/photos/flag2.jpg",
-        "/photos/flag3.jpg",
         "/photos/flag4.jpg",
-        "/photos/flag1.jpg",
+        "/photos/flag3.jpg",
+        "/photos/flag2.jpg",
+        "/photos/flag6.jpg",
       ]}
     />
   );
