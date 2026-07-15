@@ -118,10 +118,12 @@ export function SportPage({
                 viewport={{ once: true }}
                 className="bg-white rounded-2xl p-8 shadow-sm hover:shadow-lg transition-shadow duration-300"
               >
-                <span className="text-4xl mb-4 block">{item.icon}</span>
-                <h3 className="font-heading text-2xl text-packer-green tracking-wider mb-3">
-                  {item.title}
-                </h3>
+                <div className="flex items-center gap-3 sm:block sm:gap-0 sm:mb-4">
+                  <span className="text-4xl sm:mb-0">{item.icon}</span>
+                  <h3 className="font-heading text-2xl text-packer-green tracking-wider sm:mb-3">
+                    {item.title}
+                  </h3>
+                </div>
                 <p className="text-packer-green/60 text-sm leading-relaxed">
                   {item.description}
                 </p>
@@ -133,7 +135,7 @@ export function SportPage({
 
       {/* Gallery */}
       <section className="py-20 sm:py-28 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionTitle
             subtitle="Galerie"
             title="NOS MOMENTS"
