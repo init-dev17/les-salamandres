@@ -84,23 +84,23 @@ export function HomePage() {
               <SectionTitle
                 subtitle="À propos"
                 title="REJOINS LA FAMILLE"
-                description="Les Salamandres, c'est bien plus qu'une association sportive. C'est une famille unie par la passion des sports américains, au cœur du Havre."
                 align="left"
               />
-              <div className="space-y-4 text-packer-green/70 leading-relaxed">
+              <div className="space-y-4 text-packer-green/70 text-base sm:text-lg leading-relaxed">
                 <p>
                   Fondée au Havre, notre association propose quatre disciplines : le Football Américain,
-                  le Flag Football, le Cheerleading et le Baseball. Que tu sois débutant ou expérimenté,
-                  tu trouveras ta place aux Salamandres.
+                  le Flag Football, le Cheerleading et le Baseball.
                 </p>
                 <p>
-                  Nous croyons en la force du collectif, en la persévérance et en le plaisir de jouer
-                  ensemble. Rejoins-nous et fais partie de cette aventure unique en Normandie.
+                  Les Salamandres, c'est bien plus qu'une association sportive. C'est une famille unie
+                  par la passion des sports américains. 
+                </p>
+                <p>Que tu sois débutant ou expérimenté, tu trouveras ta place. Rejoins-nous et fais partie de cette aventure unique en Normandie.
                 </p>
               </div>
               <Link
                 to="/contact"
-                className="btn-secondary group"
+                className="btn-secondary group mt-8"
               >
                 Nous contacter
                 <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
@@ -155,8 +155,7 @@ export function HomePage() {
               REJOINS LES<br />SALAMANDRES
             </h2>
             <p className="text-white/70 text-lg max-w-xl mx-auto mb-10 font-subheading font-light">
-              Joueur, cheerleader, bénévole ou spectateur venu pour vivre l'ambiance,
-              il y a une place pour toi chez nous.
+              Joueur, cheerleader, bénévole ou spectateur, il y a une place pour tous et vivre cette expérience
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Link
