@@ -163,7 +163,7 @@ export function Navbar() {
       {/* Mobile Menu */}
       <div
         className={`lg:hidden transition-all duration-300 overflow-hidden ${
-          isOpen ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"
+          isOpen ? "max-h-[800px] opacity-100" : "max-h-0 opacity-0"
         }`}
       >
         <div className="bg-packer-green-dark/98 backdrop-blur-lg border-t border-packer-green-light/20 px-4 py-6 space-y-2">
