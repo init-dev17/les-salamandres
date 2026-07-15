@@ -16,6 +16,7 @@ interface SportPageProps {
   highlights: { icon: string; title: string; description: string }[];
   galleryImages: string[];
   instagramUrl?: string;
+  location?: string;
   accentColor?: string;
 }
 
@@ -30,6 +31,7 @@ export function SportPage({
   highlights,
   galleryImages,
   instagramUrl = "https://www.instagram.com/reel/DJoBItUiHVk/",
+  location: sportLocation = "Le Havre",
 }: SportPageProps) {
   return (
     <>
@@ -40,10 +42,10 @@ export function SportPage({
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 lg:grid-cols-4">
             {[
-              { icon: Clock, label: "Entraînement", value: schedule || "À définir" },
-              { icon: Users, label: "Catégorie", value: category || "Tous niveaux" },
-              { icon: MapPin, label: "Lieu", value: "Le Havre" },
-              { icon: Trophy, label: "Âges", value: ages || "10-40 ans" },
+              { icon: Clock, label: "Entraînements", value: schedule || "À définir" },
+              { icon: Users, label: "Catégories", value: category || "Tous niveaux" },
+              { icon: MapPin, label: "Lieu", value: sportLocation },
+              { icon: Trophy, label: "Âge", value: ages || "10-40 ans" },
             ].map((item, i) => (
               <div
                 key={item.label}

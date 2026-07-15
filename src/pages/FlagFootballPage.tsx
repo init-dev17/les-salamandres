@@ -7,7 +7,7 @@ export function FlagFootballPage() {
       subtitle="Discipline"
       heroImage="/photos/flag5.jpg"
       description="Le flag football est la version sans contact du football américain. Accessible à tous, il développe les mêmes qualités techniques et tactiques tout en étant plus sûr. C'est le sport idéal pour débuter ou pour jouer en toute convivialité. L'association propose des équipes mixtes et des participations à des tournois regionaux et nationaux."
-      schedule="Mercredi & Vendredi 18h-20h"
+      schedule="Mardi & Vendredi"
       category="Mixte - Tous niveaux"
       ages="15 - 40 ans"
       highlights={[
@@ -43,6 +43,7 @@ export function FlagFootballPage() {
         },
       ]}
       instagramUrl="https://www.instagram.com/reel/DJUM7sGiCoB/"
+      location="Stade Youri Gagarine - Le Havre"
       galleryImages={[
         "/photos/flag4.jpg",
         "/photos/flag3.jpg",

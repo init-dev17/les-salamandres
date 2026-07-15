@@ -7,7 +7,7 @@ export function BaseballPage() {
       subtitle="Discipline"
       heroImage="/photos/baseball.jpg"
       description="Le baseball, un classique incontournable du sport américain, trouve sa place au sein de l'association Les Salamandres. Précision du lancer, stratégie de jeu et esprit d'équipe sont les piliers de cette discipline. Notre équipe évolue en championnat régional et offre une atmosphère conviviale et compétitive aux joueurs de tous niveaux."
-      schedule="Samedi 10h-13h & Dimanche 14h-17h"
+      schedule="-"
       category="Seniors"
       ages="12-45 ans"
       highlights={[
@@ -43,6 +43,7 @@ export function BaseballPage() {
         },
       ]}
       instagramUrl="https://www.instagram.com/reel/DSlq05rAipK/"
+      location="Stade Youri Gagarine - Le Havre"
       galleryImages={[
         "https://images.unsplash.com/photo-1529768167801-9173d94c2a42?w=800&q=80",
         "/photos/baseball3.jpg",

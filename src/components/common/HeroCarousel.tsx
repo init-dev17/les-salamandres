@@ -45,10 +45,10 @@ export function HeroCarousel() {
                 <span className="inline-block font-subheading text-packer-gold text-sm tracking-[0.4em] uppercase mb-4 animate-fade-in">
                   {siteConfig.location}
                 </span>
-                <h1 className="font-heading text-6xl sm:text-7xl lg:text-8xl text-white leading-[0.9] mb-6 tracking-wider">
+                <h1 className="font-heading text-6xl sm:text-7xl lg:text-8xl text-white leading-[0.9] mb-6 max-[450px]:mb-38 tracking-wider">
                   {slide.title}
                 </h1>
-                <p className="font-subheading text-xl sm:text-2xl text-white/80 mb-8 tracking-wide font-light">
+                <p className="font-subheading text-xl sm:text-2xl text-white/80 mb-8 max-[450px]:mb-16 tracking-wide font-light">
                   {slide.subtitle}
                 </p>
                 <Link

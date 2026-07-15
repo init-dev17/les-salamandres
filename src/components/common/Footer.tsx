@@ -13,7 +13,7 @@ export function Footer() {
             <img
               src="/photos/logo-sala3.png"
               alt="Les Salamandres"
-              className="h-48 w-48 object-contain rounded-full mb-6 mx-auto md:mx-0"
+              className="h-48 w-48 object-contain mb-6 mx-auto md:mx-0"
             />
             <p className="text-white/60 text-sm leading-relaxed mb-6 text-center md:text-left">
               {siteConfig.description}
@@ -110,14 +110,9 @@ export function Footer() {
               </li>
               <li>
                 <Link to="/inscription" className="text-white/60 hover:text-packer-gold transition-colors text-sm font-subheading tracking-wide">
-                  Inscription
+                  Inscriptions
                 </Link>
-              </li>
-              <li>
-                <Link to="/mentions-legales" className="text-white/60 hover:text-packer-gold transition-colors text-sm font-subheading tracking-wide">
-                  Mentions Légales
-                </Link>
-              </li>
+              </li> 
             </ul>
           </div>
 
