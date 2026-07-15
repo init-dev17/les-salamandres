@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
+import { InstagramEmbed } from "react-social-media-embed";
 import { ChevronRight, Users, Calendar, MapPin } from "lucide-react";
 import { HeroCarousel } from "@/components/common/HeroCarousel";
 import { SportCard } from "@/components/common/SportCard";
@@ -186,62 +187,21 @@ export function HomePage() {
             light
           />
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
-              viewport={{ once: true }}
-              className="aspect-video rounded-2xl overflow-hidden relative group cursor-pointer"
-            >
-              <div
-                className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
-                style={{
-                  backgroundImage: "url(/photos/foot-senior2.jpg)",
-                }}
-              />
-              <div className="absolute inset-0 bg-packer-green-dark/40 group-hover:bg-packer-green-dark/20 transition-colors" />
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="w-20 h-20 bg-packer-gold/90 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
-                  <div className="w-0 h-0 border-t-[12px] border-t-transparent border-b-[12px] border-b-transparent border-l-[20px] border-l-packer-green ml-2" />
-                </div>
-              </div>
-              <div className="absolute bottom-4 left-4">
-                <span className="font-subheading text-white text-sm tracking-wider">Highlight Reel 2025</span>
-              </div>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.1 }}
-              viewport={{ once: true }}
-              className="aspect-video rounded-2xl overflow-hidden relative group cursor-pointer"
-            >
-              <div
-                className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
-                style={{
-                  backgroundImage: "url(/photos/cheer5.jpg)",
-                }}
-              />
-              <div className="absolute inset-0 bg-packer-green-dark/40 group-hover:bg-packer-green-dark/20 transition-colors" />
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="w-20 h-20 bg-packer-gold/90 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
-                  <div className="w-0 h-0 border-t-[12px] border-t-transparent border-b-[12px] border-b-transparent border-l-[20px] border-l-packer-green ml-2" />
-                </div>
-              </div>
-              <div className="absolute bottom-4 left-4">
-                <span className="font-subheading text-white text-sm tracking-wider">Cheerleading Show</span>
-              </div>
-            </motion.div>
+            <div className="flex justify-center">
+              <InstagramEmbed url="https://www.instagram.com/reel/DJoBItUiHVk/" width="100%" />
+            </div>
+            <div className="flex justify-center">
+              <InstagramEmbed url="https://www.instagram.com/reel/DQ7W7emArQr/" width="100%" />
+            </div>
           </div>
           <div className="text-center mt-10">
             <a
-              href={siteConfig.social.youtube}
+              href={siteConfig.social.instagram}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 text-packer-gold font-subheading text-sm tracking-[0.2em] uppercase hover:gap-4 transition-all"
             >
-              Voir plus sur YouTube
+              Voir plus sur Instagram
               <ChevronRight className="w-4 h-4" />
             </a>
           </div>
