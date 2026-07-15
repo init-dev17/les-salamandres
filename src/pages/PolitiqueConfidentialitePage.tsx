@@ -6,7 +6,7 @@ export function PolitiqueConfidentialitePage() {
       <PageHero
         title="CONFIDENTIALITÉ"
         subtitle="Protection des données"
-        image="/photos/lh2.jpg"
+        image="/photos/lh2.webp"
       />
 
       <section className="py-20 sm:py-28 bg-white">

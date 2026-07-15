@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Mail, MapPin } from "lucide-react";
+import { Mail, MapPin, Info } from "lucide-react";
 import { InstagramIcon, YoutubeIcon, FacebookIcon, TiktokIcon } from "./SocialIcons";
 import { siteConfig } from "@/data/site";
 
@@ -8,55 +8,7 @@ export function Footer() {
     <footer className="bg-packer-green-dark text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 text-center md:text-left">
-          {/* Brand */}
-          <div className="flex flex-col items-center md:items-start">
-            <img
-              src="/photos/logo-sala3.png"
-              alt="Les Salamandres"
-              className="h-48 w-48 object-contain mb-6 mx-auto md:mx-0"
-            />
-            <p className="text-white/60 text-sm leading-relaxed mb-6 text-center md:text-left">
-              {siteConfig.description}
-            </p>
-            <div className="flex gap-4 justify-center md:justify-start">
-              <a
-                href={siteConfig.social.instagram}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-packer-gold hover:text-packer-green transition-all"
-                aria-label="Instagram"
-              >
-                <InstagramIcon className="w-5 h-5" />
-              </a>
-              <a
-                href={siteConfig.social.youtube}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-packer-gold hover:text-packer-green transition-all"
-                aria-label="YouTube"
-              >
-                <YoutubeIcon className="w-5 h-5" />
-              </a>
-              <a
-                href={siteConfig.social.facebook}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-packer-gold hover:text-packer-green transition-all"
-                aria-label="Facebook"
-              >
-                <FacebookIcon className="w-5 h-5" />
-              </a>
-              <a
-                href={siteConfig.social.tiktok}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-packer-gold hover:text-packer-green transition-all"
-                aria-label="TikTok"
-              >
-                <TiktokIcon className="w-5 h-5" />
-              </a>
-            </div>
-          </div>
+          
 
           {/* Sports */}
           <div>
@@ -123,6 +75,12 @@ export function Footer() {
             </h3>
             <ul className="space-y-4">
               <li className="flex items-start gap-3 justify-center md:justify-start">
+                <Info className="w-5 h-5 text-packer-gold mt-0.5 shrink-0" />
+                <span className="text-white/60 text-sm">
+                  Les Salamandres
+                </span>
+              </li>
+              <li className="flex items-start gap-3 justify-center md:justify-start">
                 <MapPin className="w-5 h-5 text-packer-gold mt-0.5 shrink-0" />
                 <span className="text-white/60 text-sm">
                   Stade Youri Gagarine - Le Havre<br />Normandie, France
@@ -131,7 +89,7 @@ export function Footer() {
               <li className="flex items-center gap-3 justify-center md:justify-start">
                 <Mail className="w-5 h-5 text-packer-gold shrink-0" />
                 <a href="mailto:contact@les-salamandres.fr" className="text-white/60 hover:text-packer-gold transition-colors text-sm">
-                  salamandres.club@gmail.com
+                  {siteConfig.social.emailClub}
                 </a>
               </li>
               <li className="flex items-center gap-3 justify-center md:justify-start">
@@ -141,6 +99,56 @@ export function Footer() {
                 </a>
               </li>
             </ul>
+          </div>
+
+          {/* Brand */}
+          <div className="flex flex-col items-center md:items-start">
+            <img
+              src="/photos/logo-sala3.png"
+              alt="Les Salamandres"
+              className="max-h-48 object-contain mb-6 mx-auto md:mx-0"
+            />
+            <p className="text-white/60 text-sm leading-relaxed mb-6 text-center md:text-left">
+              {siteConfig.description}
+            </p>
+            <div className="flex gap-4 justify-center md:justify-start">
+              <a
+                href={siteConfig.social.instagram}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-packer-gold hover:text-packer-green transition-all"
+                aria-label="Instagram"
+              >
+                <InstagramIcon className="w-5 h-5" />
+              </a>
+              <a
+                href={siteConfig.social.youtube}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-packer-gold hover:text-packer-green transition-all"
+                aria-label="YouTube"
+              >
+                <YoutubeIcon className="w-5 h-5" />
+              </a>
+              <a
+                href={siteConfig.social.facebook}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-packer-gold hover:text-packer-green transition-all"
+                aria-label="Facebook"
+              >
+                <FacebookIcon className="w-5 h-5" />
+              </a>
+              <a
+                href={siteConfig.social.tiktok}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-packer-gold hover:text-packer-green transition-all"
+                aria-label="TikTok"
+              >
+                <TiktokIcon className="w-5 h-5" />
+              </a>
+            </div>
           </div>
         </div>
 

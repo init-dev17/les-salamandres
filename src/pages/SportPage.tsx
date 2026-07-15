@@ -145,13 +145,13 @@ export function SportPage({
             subtitle="Galerie"
             title="NOS MOMENTS"
           />
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+          <div className="grid max-[725px]:grid-cols-1 grid-cols-2 min-[1090px]:grid-cols-3 gap-4">
             <motion.div
               initial={{ opacity: 0, scale: 0.95 }}
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.5 }}
               viewport={{ once: true }}
-              className="rounded-2xl overflow-hidden md:col-span-2 md:row-span-2"
+              className="rounded-2xl overflow-hidden min-[1090px]:col-span-2 min-[1090px]:row-span-2"
             >
               <div
                 className="w-full h-full aspect-square bg-cover bg-center hover:scale-105 transition-transform duration-700"

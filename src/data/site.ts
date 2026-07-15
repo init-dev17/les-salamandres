@@ -4,10 +4,13 @@ export const siteConfig = {
   description: "Association de sports américains au Havre — Football américain, Flag Football, Cheerleading & Baseball.",
   social: {
     instagram: "https://www.instagram.com/salamandres_lh/",
+    instagramCheer: "https://www.instagram.com/cheerleading_lh/",
+    instagramFlag: "https://www.instagram.com/salamandres.flag_lh/",
     youtube: "https://www.youtube.com/@LesSalamandresduHavre",
     facebook: "https://www.facebook.com/Salamandresofficiel/",
     twitter: "https://x.com/SalamandresLH",
     tiktok: "https://www.tiktok.com/@les_salamandres_du_havre",
+    emailClub: "salamandres.club@gmail.com",
   },
   sports: [
     {
