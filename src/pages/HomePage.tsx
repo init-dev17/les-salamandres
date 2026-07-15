@@ -186,12 +186,16 @@ export function HomePage() {
             description="Découvre nos meilleurs moments en vidéo."
             light
           />
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="flex justify-center">
-              <InstagramEmbed url="https://www.instagram.com/reel/DJoBItUiHVk/" width="100%" />
+          <div className="flex flex-wrap justify-center gap-8 lg:gap-32 max-w-[750px] lg:max-w-[1000px] mx-auto">
+            <div className="w-[279px] h-[392px] overflow-hidden">
+              <div style={{ transform: "scale(0.85)", transformOrigin: "top left" }}>
+                <InstagramEmbed url="https://www.instagram.com/reel/DJoBItUiHVk/" width={328} />
+              </div>
             </div>
-            <div className="flex justify-center">
-              <InstagramEmbed url="https://www.instagram.com/reel/DQ7W7emArQr/" width="100%" />
+            <div className="w-[279px] h-[392px] overflow-hidden">
+              <div style={{ transform: "scale(0.85)", transformOrigin: "top left" }}>
+                <InstagramEmbed url="https://www.instagram.com/reel/DQ7W7emArQr/" width={328} />
+              </div>
             </div>
           </div>
           <div className="text-center mt-10">
