@@ -20,7 +20,7 @@ export function FlagFootballPage() {
         {
           icon: "⚡",
           title: "Rapide et technique",
-          description: "Un sport dynamique qui développe dribble, passes, courses et stratégie. Idéal pour s'améliorer rapidement.",
+          description: "Un sport dynamique qui développe l'agilité, la dextérité, la tactique et la stratégie. Idéal pour s'améliorer rapidement.",
         },
         {
           icon: "👫",
@@ -33,14 +33,14 @@ export function FlagFootballPage() {
           description: "Participe à des tournois régionaux et nationaux. Représente les Salamandres avec fierté sur le terrain.",
         },
         {
-          icon: "👶",
+          icon: "👨‍👩‍👧‍👦​​",
           title: "École de flag",
           description: "Un programme dédié aux jeunes dès 8 ans pour apprendre les bases du football de manière ludique et encadrée.",
         },
         {
-          icon: "🎯",
+          icon: "🏈",
           title: "Passerelle vers le football US",
-          description: "Le flag football est une excellente porte d'entrée vers le football américain pour ceux qui souhaitent découvrir le tackle.",
+          description: "Le flag football est une excellente porte d'entrée vers le football américain pour ceux qui souhaitent découvrir les placages et le contact.",
         },
       ]}
       instagramUrl="https://www.instagram.com/reel/DJUM7sGiCoB/"

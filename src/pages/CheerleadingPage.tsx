@@ -32,7 +32,7 @@ export function CheerleadingPage() {
           description: "Participe à des concours de cheerleading à travers la France. Représente Le Havre avec style et énergie.",
         },
         {
-          icon: "👶",
+          icon: "👧​",
           title: "École de cheer",
           description: "Un programme pour les jeunes dès 6 ans. Apprends les bases du cheerleading de manière ludique et progressive.",
         },
