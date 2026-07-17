@@ -169,7 +169,7 @@ export function SportPage({
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.5, delay: 0.1 }}
               viewport={{ once: true }}
-              className="rounded-2xl overflow-hidden flex items-center justify-center"
+              className="rounded-2xl overflow-hidden flex items-center justify-center min-[1090px]:row-span-2 min-[1090px]:h-full"
             >
               <InstagramEmbed url={instagramUrl} width={328} />
             </motion.div>

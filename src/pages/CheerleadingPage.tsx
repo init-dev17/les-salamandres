@@ -47,8 +47,8 @@ export function CheerleadingPage() {
       galleryImages={[
         "/photos/cheer5.jpg",
         "/photos/cheer.jpg",
-        "/photos/cheer4.jpg",
         "/photos/cheer7.jpg",
+        "/photos/cheer4.jpg",
       ]}
       /* https://www.paris-normandie.fr/id277026/article/2022-02-08/video-vous-aimez-le-sport-et-lesprit-dequipe-au-havre-le-club-de-cheerleading */
       /*https://www.youtube.com/shorts/CPe5YwrHSG8*/

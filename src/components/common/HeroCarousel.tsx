@@ -21,7 +21,7 @@ export function HeroCarousel() {
   }, [next]);
 
   return (
-    <section className="relative h-screen w-full overflow-hidden">
+    <section className="relative h-screen w-full overflow-hidden bg-packer-green-dark">
       {slides.map((slide, i) => (
         <div
           key={i}
