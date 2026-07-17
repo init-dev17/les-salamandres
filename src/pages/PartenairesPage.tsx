@@ -3,44 +3,7 @@ import { ExternalLink, Mail } from "lucide-react";
 import { PageHero } from "@/components/common/PageHero";
 import { SectionTitle } from "@/components/common/SectionTitle";
 import { siteConfig } from "@/data/site";
-
-const partners = [
-  {
-    name: "Mairie du Havre",
-    description: "Soutien institutionnel et mise à disposition d'installations sportives pour les entraînements et matchs.",
-    tier: "Institutionnel",
-    website: "https://lehavre.fr",
-    logo: "/photos/partenaires/Ville-du-Havre.png",
-  },
-  {
-    name: "FFFA - Fédération Française de Football Américain",
-    description: "Organisation des championnats nationaux et encadrement des équipes licenciées.",
-    tier: "Institutionnel",
-    website: "https://fffa.org",
-    logo: "/photos/partenaires/FFFA.png",
-  },
-  {
-    name: "Normandie Sport",
-    description: "Soutien au développement du sport en Normandie et promotion des disciplines américaines.",
-    tier: "Institutionnel",
-    website: "https://www.normandie.fr/sport",
-    logo: "/photos/partenaires/Normandie sport.png",
-  },
-  {
-    name: "Ville du Havre - Service Sports",
-    description: "Accès aux infrastructures municipales et subventions pour le développement de l'association.",
-    tier: "Institutionnel",
-    website: "https://www.lehavreseinemetropole.fr/amonservice/theme/culture-sports-loisirs",
-    logo: "/photos/partenaires/Ville-du-Havre.png",
-  },
-  {
-    name: "Ligue de Normandie (LNFA)",
-    description: "La Ligue de Normandie de Football Américain, Flag et Cheerleading est l'organisme régional réprésentant la Fédération Française de Football Américain (FFFA)",
-    tier: "Institutionnel",
-    website: "https://lnfafc.assoconnect.com/page/3336678-a-propos",
-    logo: "/photos/partenaires/LNFA.png",
-  },
-];
+ 
 
 const tierColors: Record<string, string> = {
   Or: "bg-packer-gold text-packer-green",
@@ -69,7 +32,7 @@ export function PartenairesPage() {
           />
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-            {partners.map((partner, i) => (
+            {siteConfig.partners.map((partner, i) => (
               <motion.div
                 key={partner.name}
                 initial={{ opacity: 0, y: 20 }}
