@@ -19,8 +19,7 @@ export function Navbar() {
     setIsOpen(false);
   }, [location]);
 
-  const navLinks = [
-    { to: "/", label: "Accueil" },
+  const navLinks = [ 
     {
       label: "Sports",
       children: [
@@ -30,9 +29,9 @@ export function Navbar() {
         { to: "/baseball", label: "Baseball" },
       ],
     },
-    { to: "/boutique", label: "Boutique" },
     { to: "/inscription", label: "Inscriptions" },
     { to: "/calendrier", label: "Calendrier" },
+    { to: "/boutique", label: "Boutique" },
     { to: "/partenaires", label: "Partenaires" },
     { to: "/contact", label: "Contact" },
   ];

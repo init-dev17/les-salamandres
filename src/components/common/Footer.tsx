@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Mail, MapPin, Info } from "lucide-react";
+import { Mail, MapPin, TextInitial  } from "lucide-react";
 import { InstagramIcon, YoutubeIcon, FacebookIcon, TiktokIcon } from "./SocialIcons";
 import { siteConfig } from "@/data/site";
 
@@ -80,7 +80,7 @@ export function Footer() {
             </h3>
             <ul className="space-y-4">
               <li className="flex items-start gap-3 justify-center md:justify-start">
-                <Info className="w-5 h-5 text-packer-gold mt-0.5 shrink-0" />
+                <TextInitial className="w-5 h-5 text-packer-gold mt-0.5 shrink-0" />
                 <span className="text-white/60 text-sm">
                   Les Salamandres
                 </span>

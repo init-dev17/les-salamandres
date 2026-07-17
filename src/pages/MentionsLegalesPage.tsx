@@ -19,8 +19,8 @@ export function MentionsLegalesPage() {
                 <strong>Association Les Salamandres</strong><br />
                 Association loi 1901<br />
                 Siège social : Le Havre, France<br />
-                SIRET : [Numéro SIRET à compléter]<br />
-                Président : [Nom du président à compléter]
+                SIRET : {siteConfig.siret}<br />
+                Président : {siteConfig.president}
               </p>
               <p>
                 Directeur de la publication : Le Président de l'association

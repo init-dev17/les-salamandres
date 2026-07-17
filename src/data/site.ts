@@ -2,6 +2,10 @@ export const siteConfig = {
   name: "Les Salamandres",
   location: "Le Havre - France",
   description: "Association de sports américains au Havre — Football américain, Flag Football, Cheerleading & Baseball.",
+  siret: "442 617 403 00054",
+  siren: "442 617 403",
+  siege: "",
+  president: "Karim CAMARA",
   social: {
     instagram: "https://www.instagram.com/salamandres_lh/",
     instagramCheer: "https://www.instagram.com/cheerleading_lh/",
@@ -11,6 +15,11 @@ export const siteConfig = {
     twitter: "https://x.com/SalamandresLH",
     tiktok: "https://www.tiktok.com/@les_salamandres_du_havre",
     emailClub: "salamandres.club@gmail.com",
+  },
+  hebergeur: {
+    nom: "",
+    adresse: "",
+    telephone: "",
   },
   sports: [
     {

@@ -4,7 +4,7 @@ import { PageHero } from "@/components/common/PageHero";
 import { SectionTitle } from "@/components/common/SectionTitle";
 
 const GOOGLE_CALENDAR_EMBED_URL =
-  "https://calendar.google.com/calendar/embed?height=600&wkst=2&ctz=Europe%2FParis&mode=MONTH&showTitle=0&src=YjZhMDhhZDhhYmE0ZDBlOTJmZDk2Nzg3NmI1Y2ZiNmY2ODBlMWU5NjdkZWM2ZGI4OGZkOWJmMWQzZmE5MDRhM0Bncm91cC5jYWxlbmRhci5nb29nbGUuY29t&color=%23d81b60";
+  "https://calendar.google.com/calendar/embed?height=600&wkst=2&ctz=Europe%2FParis&mode=AGENDA&showTitle=0&src=YjZhMDhhZDhhYmE0ZDBlOTJmZDk2Nzg3NmI1Y2ZiNmY2ODBlMWU5NjdkZWM2ZGI4OGZkOWJmMWQzZmE5MDRhM0Bncm91cC5jYWxlbmRhci5nb29nbGUuY29t&color=%23d81b60";
 
 export function CalendarPage() {
   return (
@@ -12,7 +12,7 @@ export function CalendarPage() {
       <PageHero
         title="CALENDRIER"
         subtitle="Retrouvez tous nos événements"
-        image="/photos/lh.webp"
+        image="/photos/foot-couloir2.jpg"
       />
 
       <section className="py-20 sm:py-28 bg-white">
@@ -37,16 +37,27 @@ export function CalendarPage() {
             viewport={{ once: true }}
             className="mt-12 rounded-2xl overflow-hidden shadow-xl border border-packer-green/10"
           >
+            
             <iframe
               title="Calendrier Les Salamandres"
               src={GOOGLE_CALENDAR_EMBED_URL}
               className="w-full"
               style={{ border: 0 }}
               width="100%"
-              height="650"
+              height="500"
               frameBorder="0"
               scrolling="no"
             />
+            {/* <iframe
+              title="Calendrier Les Salamandres"
+              src="https://calendar.google.com/calendar/embed?height=600&wkst=2&ctz=Europe%2FParis&mode=MONTH&showTitle=0&src=YjZhMDhhZDhhYmE0ZDBlOTJmZDk2Nzg3NmI1Y2ZiNmY2ODBlMWU5NjdkZWM2ZGI4OGZkOWJmMWQzZmE5MDRhM0Bncm91cC5jYWxlbmRhci5nb29nbGUuY29t&color=%23d81b60"
+              className="w-full"
+              style={{ border: 0 }}
+              width="100%"
+              height="650"
+              frameBorder="0"
+              scrolling="no"
+            /> */}
           </motion.div>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
