@@ -93,7 +93,7 @@ export function Footer() {
               </li>
               <li className="flex items-center gap-3 justify-center md:justify-start">
                 <Mail className="w-5 h-5 text-packer-gold shrink-0" />
-                <a href="mailto:contact@les-salamandres.fr" className="text-white/60 hover:text-packer-gold transition-colors text-sm">
+                <a href={`mailto:${siteConfig.social.emailClub}`} className="text-white/60 hover:text-packer-gold transition-colors text-sm">
                   {siteConfig.social.emailClub}
                 </a>
               </li>

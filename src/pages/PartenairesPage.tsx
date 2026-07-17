@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { ExternalLink, Mail } from "lucide-react";
 import { PageHero } from "@/components/common/PageHero";
 import { SectionTitle } from "@/components/common/SectionTitle";
+import { siteConfig } from "@/data/site";
 
 const partners = [
   {
@@ -126,7 +127,7 @@ export function PartenairesPage() {
           />
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="mailto:salamandres.club@gmail.com"
+              href={`mailto:${siteConfig.social.emailClub}`}
               className="btn-primary"
             >
               <Mail className="w-4 h-4" />

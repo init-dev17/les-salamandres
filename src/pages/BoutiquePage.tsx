@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { ShoppingBag, ExternalLink } from "lucide-react";
 import { PageHero } from "@/components/common/PageHero";
 import { SectionTitle } from "@/components/common/SectionTitle";
+import { siteConfig } from "@/data/site";
 
 export function BoutiquePage() {
   return (
@@ -55,7 +56,7 @@ export function BoutiquePage() {
             light
           />
           <a
-            href="mailto:salamandres.club@gmail.com"
+            href={`mailto:${siteConfig.social.emailClub}`}
             className="btn-primary"
           >
             Nous contacter

@@ -152,8 +152,8 @@ export function ContactPage() {
                     <h4 className="font-subheading text-sm text-packer-green/40 tracking-[0.2em] uppercase mb-1">
                       Email
                     </h4>
-                    <a href="mailto:contact@les-salamandres.fr" className="font-body text-packer-green hover:text-packer-gold transition-colors">
-                      salamandres.club@gmail.com
+                    <a href={`mailto:${siteConfig.social.emailClub}`} className="font-body text-packer-green hover:text-packer-gold transition-colors">
+                      {siteConfig.social.emailClub}
                     </a>
                   </div>
                 </div>
