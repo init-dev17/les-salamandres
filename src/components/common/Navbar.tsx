@@ -32,6 +32,7 @@ export function Navbar() {
     },
     { to: "/boutique", label: "Boutique" },
     { to: "/inscription", label: "Inscriptions" },
+    { to: "/calendrier", label: "Calendrier" },
     { to: "/partenaires", label: "Partenaires" },
     { to: "/contact", label: "Contact" },
   ];

@@ -64,7 +64,12 @@ export function Footer() {
                 <Link to="/inscription" className="text-white/60 hover:text-packer-gold transition-colors text-sm font-subheading tracking-wide">
                   Inscriptions
                 </Link>
-              </li> 
+              </li>
+              <li>
+                <Link to="/calendrier" className="text-white/60 hover:text-packer-gold transition-colors text-sm font-subheading tracking-wide">
+                  Calendrier
+                </Link>
+              </li>
             </ul>
           </div>
 
