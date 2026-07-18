@@ -13,7 +13,7 @@ export function FlagFootballPage() {
       ages="15 - 40 ans"
       highlights={[
         {
-          icon: "🏴",
+          icon: "🤾🏻",
           title: "Accessible à tous",
           description: "Pas besoin de matériel coûteux ni d'expérience. Le flag football est ouvert à tous, dès 8 ans, sans contact physique.",
         },
@@ -39,7 +39,7 @@ export function FlagFootballPage() {
         },
         {
           icon: "🏈",
-          title: "Passerelle vers le football US",
+          title: "Passerelle vers le foot US",
           description: "Le flag football est une excellente porte d'entrée vers le football américain pour ceux qui souhaitent découvrir les placages et le contact.",
         },
       ]}
