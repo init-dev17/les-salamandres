@@ -150,10 +150,14 @@ export function ContactPage() {
                   </div>
                   <div>
                     <h4 className="font-subheading text-sm text-packer-green/40 tracking-[0.2em] uppercase mb-1">
-                      Email
+                      Emails
                     </h4>
                     <a href={`mailto:${siteConfig.social.emailClub}`} className="font-body text-packer-green hover:text-packer-gold transition-colors">
                       {siteConfig.social.emailClub}
+                    </a>
+                    <p></p>
+                    <a href={`mailto:${siteConfig.social.emailCheer}`} className="font-body text-packer-green hover:text-packer-gold transition-colors">
+                      {siteConfig.social.emailCheer}
                     </a>
                   </div>
                 </div>
@@ -181,10 +185,10 @@ export function ContactPage() {
                       Horaires d'entraînement
                     </h4>
                     <p className="font-body text-packer-green text-sm leading-relaxed">
-                      Football US : Mardi & Jeudi 19h-21h<br />
-                      Flag Football : Mercredi & Vendredi 18h-20h<br />
-                      Cheerleading : Lundi & Vendredi 18h-20h30<br />
-                      Baseball : Samedi 10h-13h & Dimanche 14h-17h
+                      Football US : Mardi & Jeudi - à partir de 18h30<br />
+                      Flag Football : Mercredi & Vendredi - à partir de 18h30<br />
+                      Cheerleading : Mardi, Mercredi & Vendredi - à partir de 17h30<br />
+                      Baseball : -
                     </p>
                   </div>
                 </div>

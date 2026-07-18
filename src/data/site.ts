@@ -17,6 +17,7 @@ export const siteConfig = {
     emailClub: "salamandres.club@gmail.com",
     emailCheer: "salamandres.cheer@gmail.com",
   },
+  calendarColor: "FFB700",
   hebergeur: {
     nom: "",
     adresse: "",
@@ -30,6 +31,7 @@ export const siteConfig = {
       description: "Le sport roi aux États-Unis, pratiqué avec passion au Havre. Rejoignez-nous pour vivre l'intensité du football américain.",
       image: "/photos/foot-junior2.jpg",
       icon: "",
+      calendarColor: "049104",
     },
     {
       id: "flag-football",
@@ -38,6 +40,7 @@ export const siteConfig = {
       description: "Une version accessible du football américain, parfaite pour tous les âges et tous les niveaux. Technique, vitesse et stratégie.",
       image: "/photos/flag3.jpg",
       icon: "",
+      calendarColor: "008df2",
     },
     {
       id: "cheerleading",
@@ -46,6 +49,7 @@ export const siteConfig = {
       description: "Acrobaties, chorégraphies et esprit d'équipe. Le cheerleading, c'est le spectacle et la performance au service du sport.",
       image: "/photos/cheer4.jpg",
       icon: "",
+      calendarColor: "AB00CA",
     },
     {
       id: "baseball",
@@ -54,6 +58,7 @@ export const siteConfig = {
       description: "Le baseball, un classique du sport américain. Précision, stratégie et ambiance conviviale au sein de notre association.",
       image: "/photos/baseball5.jpg",
       icon: "",
+      calendarColor: "ef6c00",
     },
   ],
   heroSlides: [

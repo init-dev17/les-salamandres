@@ -4,7 +4,7 @@ import { PageHero } from "@/components/common/PageHero";
 import { SectionTitle } from "@/components/common/SectionTitle";
 
 const GOOGLE_CALENDAR_EMBED_URL =
-  "https://calendar.google.com/calendar/embed?height=600&wkst=2&ctz=Europe%2FParis&mode=AGENDA&showTitle=0&src=M2ZhMGZkY2Q4MTZjMmE4NGEzMzZjMjA2NGYzZjNlODFmZjFhNTAxMTM1ZTZkMGY2MDgzYjhlN2I4NGQ2NzFhOUBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=YjZhMDhhZDhhYmE0ZDBlOTJmZDk2Nzg3NmI1Y2ZiNmY2ODBlMWU5NjdkZWM2ZGI4OGZkOWJmMWQzZmE5MDRhM0Bncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=NGRmZjM1OTA2OGY4ZTU0NTYxMDg0MjdhMWIyNDMyMjExYjQ1ZTlhMmQ0ZTBjOGQ5ODQwMWE1MjY0NDE2NjY2NkBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=NzVkYmExNzBjMGYzNjdjZWY4MmI1Y2JlNjVkNTJlOTAyMGVkN2U3MzY3OGZiYmNiZDJjYjY5NDgyNjMwNTg0ZEBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=NTQwODM0N2I5ZmNlNTBlYmU2ZDQyNzRmM2M0MjVjMzNlOGZhMjQwZTZlMGJjNGM4NDZjNjVkYmRiM2ZkNzEwNUBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=ZnIuZnJlbmNoI2hvbGlkYXlAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&color=%23ef6c00&color=%23da1cfc&color=%23008df2&color=%23049104&color=%23ffb700&color=%23EEEEEE";
+  "https://calendar.google.com/calendar/embed?height=600&wkst=2&ctz=Europe%2FParis&mode=AGENDA&showTitle=0&src=M2ZhMGZkY2Q4MTZjMmE4NGEzMzZjMjA2NGYzZjNlODFmZjFhNTAxMTM1ZTZkMGY2MDgzYjhlN2I4NGQ2NzFhOUBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=YjZhMDhhZDhhYmE0ZDBlOTJmZDk2Nzg3NmI1Y2ZiNmY2ODBlMWU5NjdkZWM2ZGI4OGZkOWJmMWQzZmE5MDRhM0Bncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=NGRmZjM1OTA2OGY4ZTU0NTYxMDg0MjdhMWIyNDMyMjExYjQ1ZTlhMmQ0ZTBjOGQ5ODQwMWE1MjY0NDE2NjY2NkBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=NzVkYmExNzBjMGYzNjdjZWY4MmI1Y2JlNjVkNTJlOTAyMGVkN2U3MzY3OGZiYmNiZDJjYjY5NDgyNjMwNTg0ZEBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=NTQwODM0N2I5ZmNlNTBlYmU2ZDQyNzRmM2M0MjVjMzNlOGZhMjQwZTZlMGJjNGM4NDZjNjVkYmRiM2ZkNzEwNUBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=ZnIuZnJlbmNoI2hvbGlkYXlAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&color=%23ef6c00&color=%23AB00CA&color=%23008df2&color=%23049104&color=%23ffb700&color=%23DDDDDD";
 
 export function CalendarPage() {
   return (
@@ -44,7 +44,7 @@ export function CalendarPage() {
               className="w-full"
               style={{ border: 0 }}
               width="100%"
-              height="500"
+              height="600"
               frameBorder="0"
               scrolling="no"
             />
