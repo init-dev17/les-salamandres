@@ -43,7 +43,7 @@ export function CheerleadingPage() {
         },
       ]}
       instagramUrl="https://www.instagram.com/reel/DYKwfGFRLsH/"
-      location="Gymnases Claude Bernard & Jules Deschaseaux - Le Havre"
+      location="Gymnases Claude Bernard, Edouard Vaillant & Jules Deschaseaux"
       galleryImages={[
         "/photos/cheer5.jpg",
         "/photos/cheer.jpg",

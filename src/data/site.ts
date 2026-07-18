@@ -15,6 +15,7 @@ export const siteConfig = {
     twitter: "https://x.com/SalamandresLH",
     tiktok: "https://www.tiktok.com/@les_salamandres_du_havre",
     emailClub: "salamandres.club@gmail.com",
+    emailCheer: "salamandres.cheer@gmail.com",
   },
   hebergeur: {
     nom: "",
