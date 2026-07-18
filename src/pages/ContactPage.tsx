@@ -188,7 +188,7 @@ export function ContactPage() {
                       Football US : Mardi & Jeudi - à partir de 18h30<br />
                       Flag Football : Mercredi & Vendredi - à partir de 18h30<br />
                       Cheerleading : Mardi, Mercredi & Vendredi - à partir de 17h30<br />
-                      Baseball : -
+                      {/* Baseball : - */}
                     </p>
                   </div>
                 </div>

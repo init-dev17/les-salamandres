@@ -31,11 +31,11 @@ export function Footer() {
                   Cheerleading
                 </Link>
               </li>
-              <li>
+              {/* <li>
                 <Link to="/baseball" className="text-white/60 hover:text-packer-gold transition-colors text-sm font-subheading tracking-wide">
                   Baseball
                 </Link>
-              </li>
+              </li> */}
             </ul>
           </div>
 

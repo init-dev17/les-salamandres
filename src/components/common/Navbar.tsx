@@ -26,7 +26,7 @@ export function Navbar() {
         { to: "/football-americain", label: "Football Américain" },
         { to: "/flag-football", label: "Flag Football" },
         { to: "/cheerleading", label: "Cheerleading" },
-        { to: "/baseball", label: "Baseball" },
+        // { to: "/baseball", label: "Baseball" },
       ],
     },
     { to: "/inscription", label: "Inscriptions" },

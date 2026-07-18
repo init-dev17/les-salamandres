@@ -1,7 +1,7 @@
 export const siteConfig = {
   name: "Les Salamandres",
   location: "Le Havre - France",
-  description: "Association de sports américains au Havre — Football américain, Flag Football, Cheerleading & Baseball.",
+  description: "Association de sports américains au Havre — Football américain, Flag Football & Cheerleading.",
   siret: "442 617 403 00054",
   siren: "442 617 403",
   siege: "",
@@ -51,15 +51,15 @@ export const siteConfig = {
       icon: "",
       calendarColor: "AB00CA",
     },
-    {
-      id: "baseball",
-      name: "Baseball",
-      shortName: "Baseball",
-      description: "Le baseball, un classique du sport américain. Précision, stratégie et ambiance conviviale au sein de notre association.",
-      image: "/photos/baseball5.jpg",
-      icon: "",
-      calendarColor: "ef6c00",
-    },
+    // {
+    //   id: "baseball",
+    //   name: "Baseball",
+    //   shortName: "Baseball",
+    //   description: "Le baseball, un classique du sport américain. Précision, stratégie et ambiance conviviale au sein de notre association.",
+    //   image: "/photos/baseball5.jpg",
+    //   icon: "",
+    //   calendarColor: "ef6c00",
+    // },
   ],
   heroSlides: [
     {
@@ -90,13 +90,13 @@ export const siteConfig = {
       cta: "S'inscrire",
       link: "/flag-football",
     },
-    {
-      title: "BASEBALL",
-      subtitle: "Accessible à tous, intense pour tous",
-      image: "https://images.unsplash.com/photo-1529768167801-9173d94c2a42?w=1200&q=80",
-      cta: "En savoir plus",
-      link: "/baseball",
-    },
+    // {
+    //   title: "BASEBALL",
+    //   subtitle: "Accessible à tous, intense pour tous",
+    //   image: "https://images.unsplash.com/photo-1529768167801-9173d94c2a42?w=1200&q=80",
+    //   cta: "En savoir plus",
+    //   link: "/baseball",
+    // },
   ],
   partners: [
     {

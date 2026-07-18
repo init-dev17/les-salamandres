@@ -53,9 +53,9 @@ export function HomePage() {
           <SectionTitle
             subtitle="Nos disciplines"
             title="CHOISIS TON SPORT"
-            description="Quatre disciplines américaines, une seule passion. Trouve celle qui te correspond."
+            description="Trois disciplines américaines, une seule passion. Trouve celle qui te correspond."
           />
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-6">
             {siteConfig.sports.map((sport, i) => (
               <motion.div
                 key={sport.id}
@@ -88,8 +88,8 @@ export function HomePage() {
               />
               <div className="space-y-4 text-packer-green/70 text-base sm:text-lg leading-relaxed">
                 <p>
-                  Fondée au Havre, notre association propose quatre disciplines : le Football Américain,
-                  le Flag Football, le Cheerleading et le Baseball.
+                  Fondée au Havre, notre association propose trois disciplines : le Football Américain,
+                  le Flag Football & le Cheerleading.
                 </p>
                 <p>
                   Les Salamandres, c'est bien plus qu'une association sportive. C'est une famille unie
@@ -155,7 +155,7 @@ export function HomePage() {
               REJOINS LES<br />SALAMANDRES
             </h2>
             <p className="text-white/70 text-lg max-w-xl mx-auto mb-10 font-subheading font-light">
-              Joueur, cheerleader, bénévole ou spectateur, il y a une place pour tous et vivre cette expérience
+              Joueur, cheerleader, coach, bénévole ou spectateur, il y a une place pour toi et vivre cette expérience
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Link
