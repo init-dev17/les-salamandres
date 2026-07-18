@@ -29,7 +29,7 @@ export function InscriptionPage() {
       />
 
       <section className="py-20 sm:py-28 bg-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="space-y-16">
             {/* COMMENT ÇA MARCHE ? */}
             <motion.div
