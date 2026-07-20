@@ -5,7 +5,7 @@ import { HomePage } from "@/pages/HomePage";
 import { FootballUSPage } from "@/pages/FootballUSPage";
 import { FlagFootballPage } from "@/pages/FlagFootballPage";
 import { CheerleadingPage } from "@/pages/CheerleadingPage";
-import { BaseballPage } from "@/pages/BaseballPage";
+// import { BaseballPage } from "@/pages/BaseballPage";
 import { BoutiquePage } from "@/pages/BoutiquePage";
 import { PartenairesPage } from "@/pages/PartenairesPage";
 import { ContactPage } from "@/pages/ContactPage";
