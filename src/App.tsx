@@ -25,7 +25,7 @@ export default function App() {
           <Route path="/football-americain" element={<FootballUSPage />} />
           <Route path="/flag-football" element={<FlagFootballPage />} />
           <Route path="/cheerleading" element={<CheerleadingPage />} />
-          <Route path="/baseball" element={<BaseballPage />} />
+          {/* <Route path="/baseball" element={<BaseballPage />} /> */}
           <Route path="/boutique" element={<BoutiquePage />} />
           <Route path="/partenaires" element={<PartenairesPage />} />
           <Route path="/contact" element={<ContactPage />} />

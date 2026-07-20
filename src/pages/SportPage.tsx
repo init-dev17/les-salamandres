@@ -85,6 +85,7 @@ export function SportPage({
                 title={title}
                 description={description}
                 align="left"
+                titleIcon={titleIcon}
               />
             </motion.div>
 

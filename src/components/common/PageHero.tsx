@@ -22,7 +22,7 @@ export function PageHero({ title, subtitle, image, titleIcon }: PageHeroProps) {
         )}
         <h1 className="font-heading text-5xl sm:text-6xl lg:text-7xl xl:text-8xl text-white tracking-wider leading-[0.9] flex items-center gap-4">
           {title}
-          {titleIcon && <img src={titleIcon} alt="" className="h-[53px] w-[53px] sm:h-[70px] sm:w-[70px] lg:h-[88px] lg:w-[88px] object-contain" />}
+          {titleIcon && <img src={titleIcon} alt="" className="h-[53px] w-[75px] sm:h-[70px] sm:w-[90px] lg:h-[88px] lg:w-[120px] object-contain" />}
         </h1>
         <div className="w-24 h-1 bg-packer-gold mt-6" />
       </div>
