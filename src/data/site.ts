@@ -134,5 +134,12 @@ export const siteConfig = {
     website: "https://lnfafc.assoconnect.com/page/3336678-a-propos",
     logo: "/photos/partenaires/LNFA.png",
   },
+  {
+    name: "Raso Store",
+    description: "Équipementier Sportif pour Clubs & Associations",
+    tier: "Or",
+    website: "https://rasostore.fr/",
+    logo: "/photos/partenaires/r.avif",
+  },
   ],
 };
