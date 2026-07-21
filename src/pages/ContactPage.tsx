@@ -131,7 +131,7 @@ export function ContactPage() {
                 </div>
                 <button
                   type="submit"
-                  disabled={formStatus === "sending"}
+                  disabled //={formStatus === "sending"}
                   className="btn-secondary group disabled:opacity-50"
                 >
                   {formStatus === "sent" ? (
