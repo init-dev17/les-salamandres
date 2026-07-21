@@ -1,37 +1,45 @@
-import { useState, useRef, useEffect } from "react";
+import { useState } from "react";
 import { motion } from "framer-motion";
 import { Mail, MapPin, Send, Clock } from "lucide-react";
 import { InstagramIcon, YoutubeIcon, FacebookIcon, TiktokIcon } from "@/components/common/SocialIcons";
 import { PageHero } from "@/components/common/PageHero";
 import { SectionTitle } from "@/components/common/SectionTitle";
 import { siteConfig } from "@/data/site";
-import emailjs from "@emailjs/browser";
 
 export function ContactPage() {
-  const form = useRef<HTMLFormElement>(null);
   const [formStatus, setFormStatus] = useState<"idle" | "sending" | "sent" | "error">("idle");
 
-  useEffect(() => {
-    emailjs.init({ publicKey: import.meta.env.VITE_EMAILJS_PUBLIC_KEY });
-  }, []);
+  const [formData, setFormData] = useState({ user_lastname: '', user_firstname: '', user_email: '', value: '', message: '' });
+  
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({ ...prev, [name]: value }));
+  };
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!form.current) return;
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault(); 
+    console.log("Données récupérées :", formData);
     setFormStatus("sending");
-    emailjs
-      .sendForm(
-        import.meta.env.VITE_EMAILJS_SERVICE_ID,
-        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
-        form.current,
-      )
-      .then(() => {
-        setFormStatus("sent");
-        form.current?.reset();
-      })
-      .catch(() => {
-        setFormStatus("error");
-      });
+
+  try {
+    const response = await fetch('/api/sendEmail', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(formData),
+    });
+
+    const result = await response.json();
+    if (result.success) {
+      alert('Email sent successfully!');
+    } else {
+      throw new Error(result.error);
+    }
+    
+    } catch (error) {
+      console.error('Error sending email:', error);
+      alert('Failed to send email.');
+    }
+
   };
 
   return (
@@ -57,7 +65,7 @@ export function ContactPage() {
                 title="PRENEZ CONTACT"
                 align="left"
               />
-              <form ref={form} onSubmit={handleSubmit} className="space-y-6">
+              <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                   <div>
                     <label className="block font-subheading text-sm text-packer-green/60 tracking-wider mb-2 uppercase">
