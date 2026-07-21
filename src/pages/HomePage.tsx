@@ -84,9 +84,9 @@ export function HomePage() {
               <SectionTitle
                 subtitle="À propos"
                 title="REJOINS LA FAMILLE"
-                align="left"
+                align="center"
               />
-              <div className="space-y-4 text-packer-green/70 text-base sm:text-lg leading-relaxed">
+              <div className="space-y-4 text-packer-green/70 text-base sm:text-lg leading-relaxed text-center">
                 <p>
                   Fondée au Havre, notre association propose trois disciplines : le Football Américain,
                   le Flag Football & le Cheerleading.
@@ -98,13 +98,15 @@ export function HomePage() {
                 <p>Que tu sois débutant ou expérimenté, tu trouveras ta place. Rejoins-nous et fais partie de cette aventure unique en Normandie.
                 </p>
               </div>
+              <div className="mt-8 flex justify-center">
               <Link
                 to="/contact"
-                className="btn-secondary group mt-8"
+                className="btn-secondary group"
               >
                 Nous contacter
                 <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Link>
+              </div>
             </motion.div>
 
             <motion.div
