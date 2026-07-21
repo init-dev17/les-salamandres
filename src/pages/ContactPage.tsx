@@ -1,47 +1,11 @@
-import { useState } from "react";
 import { motion } from "framer-motion";
-import { Mail, MapPin, Send, Clock } from "lucide-react";
+import { Mail, MapPin, Clock } from "lucide-react";
 import { InstagramIcon, YoutubeIcon, FacebookIcon, TiktokIcon } from "@/components/common/SocialIcons";
 import { PageHero } from "@/components/common/PageHero";
 import { SectionTitle } from "@/components/common/SectionTitle";
 import { siteConfig } from "@/data/site";
 
 export function ContactPage() {
-  const [formStatus, setFormStatus] = useState<"idle" | "sending" | "sent" | "error">("idle");
-
-  const [formData, setFormData] = useState({ user_lastname: '', user_firstname: '', user_email: '', value: '', message: '' });
-  
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({ ...prev, [name]: value }));
-  };
-
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault(); 
-    console.log("Données récupérées :", formData);
-    setFormStatus("sending");
-
-  try {
-    const response = await fetch('/api/sendEmail', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(formData),
-    });
-
-    const result = await response.json();
-    if (result.success) {
-      alert('Email sent successfully!');
-    } else {
-      throw new Error(result.error);
-    }
-    
-    } catch (error) {
-      console.error('Error sending email:', error);
-      alert('Failed to send email.');
-    }
-
-  };
-
   return (
     <>
       <PageHero
@@ -52,115 +16,19 @@ export function ContactPage() {
 
       <section className="py-20 sm:py-28 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20">
-            {/* Contact Form */}
-            <motion.div
-              initial={{ opacity: 0, x: -30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-            >
-              <SectionTitle
-                subtitle="Écrivez-nous"
-                title="PRENEZ CONTACT"
-                align="left"
-              />
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                  <div>
-                    <label className="block font-subheading text-sm text-packer-green/60 tracking-wider mb-2 uppercase">
-                      Nom
-                    </label>
-                    <input
-                      type="text"
-                      name="user_lastname"
-                      required
-                      className="w-full px-4 py-3 bg-salamandre-gray border border-packer-green/10 rounded-lg focus:outline-none focus:border-packer-gold focus:ring-1 focus:ring-packer-gold transition-colors font-body text-packer-green"
-                      placeholder="Votre nom"
-                    />
-                  </div>
-                  <div>
-                    <label className="block font-subheading text-sm text-packer-green/60 tracking-wider mb-2 uppercase">
-                      Prénom
-                    </label>
-                    <input
-                      type="text"
-                      name="user_firstname"
-                      required
-                      className="w-full px-4 py-3 bg-salamandre-gray border border-packer-green/10 rounded-lg focus:outline-none focus:border-packer-gold focus:ring-1 focus:ring-packer-gold transition-colors font-body text-packer-green"
-                      placeholder="Votre prénom"
-                    />
-                  </div>
-                </div>
-                <div>
-                  <label className="block font-subheading text-sm text-packer-green/60 tracking-wider mb-2 uppercase">
-                    Email
-                  </label>
-                  <input
-                    type="email"
-                    name="user_email"
-                    required
-                    className="w-full px-4 py-3 bg-salamandre-gray border border-packer-green/10 rounded-lg focus:outline-none focus:border-packer-gold focus:ring-1 focus:ring-packer-gold transition-colors font-body text-packer-green"
-                    placeholder="votre@email.com"
-                  />
-                </div>
-                <div>
-                  <label className="block font-subheading text-sm text-packer-green/60 tracking-wider mb-2 uppercase">
-                    Sport souhaité
-                  </label>
-                  <select name="sport" className="w-full px-4 py-3 bg-salamandre-gray border border-packer-green/10 rounded-lg focus:outline-none focus:border-packer-gold focus:ring-1 focus:ring-packer-gold transition-colors font-body text-packer-green appearance-none">
-                    <option value="">Choisir un sport</option>
-                    <option value="football-us">Football Américain</option>
-                    <option value="flag">Flag Football</option>
-                    <option value="cheer">Cheerleading</option>
-                    {/* <option value="baseball">Baseball / Softball</option> */}
-                    <option value="autre">Autre / Général</option>
-                  </select>
-                </div>
-                <div>
-                  <label className="block font-subheading text-sm text-packer-green/60 tracking-wider mb-2 uppercase">
-                    Message
-                  </label>
-                  <textarea
-                    name="message"
-                    rows={5}
-                    required
-                    className="w-full px-4 py-3 bg-salamandre-gray border border-packer-green/10 rounded-lg focus:outline-none focus:border-packer-gold focus:ring-1 focus:ring-packer-gold transition-colors font-body text-packer-green resize-none"
-                    placeholder="Votre message..."
-                  />
-                </div>
-                <button
-                  type="submit"
-                  disabled //={formStatus === "sending"}
-                  className="btn-secondary group disabled:opacity-50"
-                >
-                  {formStatus === "sent" ? (
-                    "Message envoyé !"
-                  ) : formStatus === "error" ? (
-                    "Erreur d'envoi, réessayez"
-                  ) : formStatus === "sending" ? (
-                    "Envoi en cours..."
-                  ) : (
-                    <>
-                      Envoyer
-                      <Send className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                    </>
-                  )}
-                </button>
-              </form>
-            </motion.div>
-
+          <div className="flex justify-center">
             {/* Contact Info */}
             <motion.div
               initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
               viewport={{ once: true }}
+              className="w-full max-w-2xl"
             >
               <SectionTitle
                 subtitle="Coordonnées"
                 title="NOS INFORMATIONS"
-                align="left"
+                align="center"
               />
               <div className="space-y-8">
                 <div className="flex items-start gap-4">
