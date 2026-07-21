@@ -18,6 +18,11 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+#root {
+  overflow-x: hidden;
 }
 
 body {
@@ -43,21 +48,23 @@ a {
   color: var(--color-packer-green);
 }
 
-::-webkit-scrollbar {
-  width: 8px;
-}
+@media (min-width: 1024px) {
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
 
-::-webkit-scrollbar-track {
-  background: var(--color-packer-green-dark);
-}
+  ::-webkit-scrollbar-track {
+    background: var(--color-packer-green-dark);
+  }
 
-::-webkit-scrollbar-thumb {
-  background: var(--color-packer-gold);
-  border-radius: 4px;
-}
+  ::-webkit-scrollbar-thumb {
+    background: var(--color-packer-gold);
+    border-radius: 4px;
+  }
 
-::-webkit-scrollbar-thumb:hover {
-  background: var(--color-packer-gold-light);
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--color-packer-gold-light);
+  }
 }
 
 /* Ensure buttons and links look correct */
