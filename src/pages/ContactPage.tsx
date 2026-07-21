@@ -1,18 +1,37 @@
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Mail, MapPin, Send, Clock } from "lucide-react";
 import { InstagramIcon, YoutubeIcon, FacebookIcon, TiktokIcon } from "@/components/common/SocialIcons";
 import { PageHero } from "@/components/common/PageHero";
 import { SectionTitle } from "@/components/common/SectionTitle";
 import { siteConfig } from "@/data/site";
+import emailjs from "@emailjs/browser";
 
 export function ContactPage() {
-  const [formStatus, setFormStatus] = useState<"idle" | "sending" | "sent">("idle");
+  const form = useRef<HTMLFormElement>(null);
+  const [formStatus, setFormStatus] = useState<"idle" | "sending" | "sent" | "error">("idle");
+
+  useEffect(() => {
+    emailjs.init({ publicKey: import.meta.env.VITE_EMAILJS_PUBLIC_KEY });
+  }, []);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    if (!form.current) return;
     setFormStatus("sending");
-    setTimeout(() => setFormStatus("sent"), 1500);
+    emailjs
+      .sendForm(
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+        form.current,
+      )
+      .then(() => {
+        setFormStatus("sent");
+        form.current?.reset();
+      })
+      .catch(() => {
+        setFormStatus("error");
+      });
   };
 
   return (
@@ -38,7 +57,7 @@ export function ContactPage() {
                 title="PRENEZ CONTACT"
                 align="left"
               />
-              <form onSubmit={handleSubmit} className="space-y-6">
+              <form ref={form} onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                   <div>
                     <label className="block font-subheading text-sm text-packer-green/60 tracking-wider mb-2 uppercase">
@@ -46,6 +65,7 @@ export function ContactPage() {
                     </label>
                     <input
                       type="text"
+                      name="user_lastname"
                       required
                       className="w-full px-4 py-3 bg-salamandre-gray border border-packer-green/10 rounded-lg focus:outline-none focus:border-packer-gold focus:ring-1 focus:ring-packer-gold transition-colors font-body text-packer-green"
                       placeholder="Votre nom"
@@ -57,6 +77,7 @@ export function ContactPage() {
                     </label>
                     <input
                       type="text"
+                      name="user_firstname"
                       required
                       className="w-full px-4 py-3 bg-salamandre-gray border border-packer-green/10 rounded-lg focus:outline-none focus:border-packer-gold focus:ring-1 focus:ring-packer-gold transition-colors font-body text-packer-green"
                       placeholder="Votre prénom"
@@ -69,6 +90,7 @@ export function ContactPage() {
                   </label>
                   <input
                     type="email"
+                    name="user_email"
                     required
                     className="w-full px-4 py-3 bg-salamandre-gray border border-packer-green/10 rounded-lg focus:outline-none focus:border-packer-gold focus:ring-1 focus:ring-packer-gold transition-colors font-body text-packer-green"
                     placeholder="votre@email.com"
@@ -78,12 +100,12 @@ export function ContactPage() {
                   <label className="block font-subheading text-sm text-packer-green/60 tracking-wider mb-2 uppercase">
                     Sport souhaité
                   </label>
-                  <select className="w-full px-4 py-3 bg-salamandre-gray border border-packer-green/10 rounded-lg focus:outline-none focus:border-packer-gold focus:ring-1 focus:ring-packer-gold transition-colors font-body text-packer-green appearance-none">
+                  <select name="sport" className="w-full px-4 py-3 bg-salamandre-gray border border-packer-green/10 rounded-lg focus:outline-none focus:border-packer-gold focus:ring-1 focus:ring-packer-gold transition-colors font-body text-packer-green appearance-none">
                     <option value="">Choisir un sport</option>
                     <option value="football-us">Football Américain</option>
                     <option value="flag">Flag Football</option>
                     <option value="cheer">Cheerleading</option>
-                    <option value="baseball">Baseball</option>
+                    {/* <option value="baseball">Baseball / Softball</option> */}
                     <option value="autre">Autre / Général</option>
                   </select>
                 </div>
@@ -92,6 +114,7 @@ export function ContactPage() {
                     Message
                   </label>
                   <textarea
+                    name="message"
                     rows={5}
                     required
                     className="w-full px-4 py-3 bg-salamandre-gray border border-packer-green/10 rounded-lg focus:outline-none focus:border-packer-gold focus:ring-1 focus:ring-packer-gold transition-colors font-body text-packer-green resize-none"
@@ -105,6 +128,8 @@ export function ContactPage() {
                 >
                   {formStatus === "sent" ? (
                     "Message envoyé !"
+                  ) : formStatus === "error" ? (
+                    "Erreur d'envoi, réessayez"
                   ) : formStatus === "sending" ? (
                     "Envoi en cours..."
                   ) : (
