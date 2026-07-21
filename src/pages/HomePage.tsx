@@ -8,9 +8,9 @@ import { SectionTitle } from "@/components/common/SectionTitle";
 import { siteConfig } from "@/data/site";
 
 const stats = [
-  { icon: Users, label: "Nombre de licenciés", value: "140+" },
   { icon: Calendar, label: "Depuis", value: "1990" },
-  { icon: Users, label: "Bénévoles", value: "30" },
+  { icon: Users, label: "Nombre de licenciés", value: "140+" },
+  { icon: Users, label: "Coachs et bénévoles", value: "30" },
   { icon: MapPin, label: "Normandie, France", value: "Le Havre" },
 ];
 

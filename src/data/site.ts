@@ -128,7 +128,7 @@ export const siteConfig = {
     logo: "/photos/partenaires/Ville-du-Havre.png",
   },
   {
-    name: "Ligue de Normandie (LNFA)",
+    name: "LNFA - Ligue de Normandie",
     description: "La Ligue de Normandie de Football Américain, Flag et Cheerleading est l'organisme régional réprésentant la Fédération Française de Football Américain (FFFA)",
     tier: "Institutionnel",
     website: "https://lnfafc.assoconnect.com/page/3336678-a-propos",
