@@ -44,6 +44,7 @@ export function FootballUSPage() {
       ]}
       instagramUrl="https://www.instagram.com/reel/DTvjoSvAv8W/"
       location="Stade Youri Gagarine - Le Havre"
+      videoUrl="https://youtu.be/kgP8gBbyjFk"
       galleryImages={[
         "/photos/foot2.jpg",
         "/photos/foot-senior3.jpg",

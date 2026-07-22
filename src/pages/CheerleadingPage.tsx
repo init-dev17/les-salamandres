@@ -44,14 +44,14 @@ export function CheerleadingPage() {
       ]}
       instagramUrl="https://www.instagram.com/reel/DYKwfGFRLsH/"
       location="Gymnases Claude Bernard, Edouard Vaillant & Jules Deschaseaux"
+      videoUrl="https://www.youtube.com/watch?v=vnM0F0F4pkQ"
+      videoEnd={113}
       galleryImages={[
         "/photos/cheer5.jpg",
         "/photos/cheer.jpg",
         "/photos/cheer7.jpg",
         "/photos/cheer4.jpg",
       ]}
-      /* https://www.paris-normandie.fr/id277026/article/2022-02-08/video-vous-aimez-le-sport-et-lesprit-dequipe-au-havre-le-club-de-cheerleading */
-      /*https://www.youtube.com/shorts/CPe5YwrHSG8*/
     />
   );
 }

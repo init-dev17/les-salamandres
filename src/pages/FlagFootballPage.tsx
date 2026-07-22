@@ -45,6 +45,9 @@ export function FlagFootballPage() {
       ]}
       instagramUrl="https://www.instagram.com/reel/DJUM7sGiCoB/"
       location="Stade Youri Gagarine - Le Havre"
+      videoUrl="https://youtu.be/9Ctg3B-WbwY?t=1"
+      videoStart={1}
+      videoEnd={190}
       galleryImages={[
         "/photos/flag4.jpg",
         "/photos/flag3.jpg",

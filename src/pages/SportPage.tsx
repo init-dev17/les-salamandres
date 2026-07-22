@@ -5,6 +5,19 @@ import { ChevronRight, Clock, Users, MapPin, Trophy } from "lucide-react";
 import { PageHero } from "@/components/common/PageHero";
 import { SectionTitle } from "@/components/common/SectionTitle";
 
+function extractYoutubeId(url: string): string | null {
+  const patterns = [
+    /youtube\.com\/shorts\/([a-zA-Z0-9_-]+)/,
+    /youtu\.be\/([a-zA-Z0-9_-]+)/,
+    /youtube\.com\/watch\?v=([a-zA-Z0-9_-]+)/,
+  ];
+  for (const pattern of patterns) {
+    const match = url.match(pattern);
+    if (match) return match[1];
+  }
+  return null;
+}
+
 interface SportPageProps {
   title: string;
   subtitle: string;
@@ -19,6 +32,9 @@ interface SportPageProps {
   location?: string;
   titleIcon?: string;
   accentColor?: string;
+  videoUrl?: string;
+  videoStart?: number;
+  videoEnd?: number;
 }
 
 export function SportPage({
@@ -34,6 +50,9 @@ export function SportPage({
   instagramUrl = "https://www.instagram.com/reel/DJoBItUiHVk/",
   location: sportLocation = "Le Havre",
   titleIcon,
+  videoUrl,
+  videoStart,
+  videoEnd,
 }: SportPageProps) {
   return (
     <>
@@ -108,6 +127,33 @@ export function SportPage({
           </div>
         </div>
       </section>
+
+      {/* Video Presentation */}
+      {videoUrl && extractYoutubeId(videoUrl) && (
+        <section className="py-20 sm:py-28 bg-white">
+          <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <SectionTitle
+              subtitle="Découvrir"
+              title="EN VIDÉO"
+            />
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="relative aspect-video rounded-2xl overflow-hidden shadow-2xl"
+            >
+              <iframe
+                src={`https://www.youtube.com/embed/${extractYoutubeId(videoUrl)}${videoStart != null || videoEnd != null ? `?${videoStart != null ? `start=${videoStart}` : ""}${videoStart != null && videoEnd != null ? "&" : ""}${videoEnd != null ? `end=${videoEnd}` : ""}` : ""}`}
+                title={`Vidéo ${title}`}
+                className="absolute inset-0 w-full h-full border-0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              />
+            </motion.div>
+          </div>
+        </section>
+      )}
 
       {/* Highlights */}
       <section className="py-20 sm:py-28 bg-salamandre-gray">
