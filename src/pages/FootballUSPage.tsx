@@ -5,7 +5,7 @@ export function FootballUSPage() {
     <SportPage
       title="FOOTBALL AMÉRICAIN"
       subtitle="Discipline"
-      heroImage="/photos/foot-senior.jpg"
+      heroImage="/photos/foot-senior4.webp"
       description="Le Football Américain est le sport-roi aux États-Unis. En France, c'est plus de 35.000 licenciés répartis dans 250 clubs affiliés à la FFFA. Aux Salamandres du Havre, il est pratiqué avec passion et intensité. Que tu sois un joueur confirmé ou que tu découvres ce sport, nos coachs t'accompagnent pour progresser. L'association évolue en championnat régional et national en jouant de nombreux matchs en Normandie et en France à chaque saison."
       schedule="Mardi & Jeudi"
       category="U15, U18 & Séniors"
