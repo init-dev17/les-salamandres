@@ -34,7 +34,7 @@ export function FootballUSPage() {
         {
           icon: "🎓",
           title: "Formation",
-          description: "Des clinics et stages réguliers pour apprendre les bases ou perfectionner ta technique, quel que soit ton niveau.",
+          description: "Des camps d'entrainement et rassemblements réguliers pour apprendre les bases ou perfectionner ta technique, quel que soit ton niveau.",
         },
         {
           icon: "🤝",
