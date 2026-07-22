@@ -112,7 +112,8 @@ export const siteConfig = {
     {
       id: "football-americain",
       name: "Football Américain",
-      logo: "/photos/football-americain-logo.png",
+      logo: "/photos/american-football-logo.png",
+      logoHoverText: "By max.icons - Flaticon.com",
       address: "Stade Youri Gagarine - Le Havre",
       schedule: [
         { category: "U18", days: "Mardi & Jeudi", time: "18h30-20h30" },
@@ -127,6 +128,7 @@ export const siteConfig = {
       id: "cheerleading",
       name: "Cheerleading",
       logo: "/photos/cheer-logo2.png",
+      logoHoverText: "By BZZRINCANTATION - flaticon.com",
       address: "Gymnases Jules Deschaseaux, Edouard Vaillant & Claude Bernard",
       schedule: [
         { category: "Minimes", days: "Mercredi", time: "17h30-18h30" },
@@ -141,7 +143,8 @@ export const siteConfig = {
     {
       id: "flag-football",
       name: "Flag Football",
-      logo: "/photos/flag-logo.webp",
+      logo: "/photos/american-football.png",
+      logoHoverText: "By Magnific - flaticon.com",
       address: "Stade Youri Gagarine - Le Havre",
       schedule: [
         { category: "Juniors", days: "Mardi & Jeudi", time: "18h30-20h30" },

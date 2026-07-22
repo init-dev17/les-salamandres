@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Mail, MapPin, Phone, Clock } from "lucide-react";
+import { Mail, MapPin, Clock } from "lucide-react";
 import { InstagramIcon } from "./SocialIcons";
 
 interface Schedule {
@@ -12,6 +12,7 @@ interface ContactSection {
   id: string;
   name: string;
   logo: string;
+  logoHoverText?: string;
   address: string;
   schedule?: Schedule[];
   email: string;
@@ -34,12 +35,19 @@ export function ContactCard({ section, index }: ContactCardProps) {
       viewport={{ once: true }}
       className="bg-white rounded-2xl p-6 sm:p-8 shadow-[0_4px_24px_rgba(31,55,49,0.08)] border border-packer-green/5 flex flex-col items-center text-center"
     >
-      <div className="w-24 h-24 sm:w-28 sm:h-28   overflow-hidden  flex items-center justify-center mb-6 ">
+      <div className="group relative w-24 h-24 sm:w-28 sm:h-28 overflow-hidden flex items-center justify-center mb-6">
         <img
           src={section.logo}
           alt={section.name}
-          className="w-full h-full object-contain p-2"
+          className="w-full h-full object-contain p-2 transition-transform duration-300 group-hover:scale-110"
         />
+        {section.logoHoverText && (
+          <div className="absolute inset-0 bg-packer-green-dark/80 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-full">
+            <span className="font-body text-[10px] text-white/80 px-3 text-center leading-tight">
+              {section.logoHoverText}
+            </span>
+          </div>
+        )}
       </div>
 
       <h3 className="font-heading text-2xl sm:text-3xl text-packer-green tracking-wider mb-6">
