@@ -46,7 +46,8 @@ export function InscriptionPage() {
                   {[
                     { step: "1", title: "Contacte-nous", desc: "Dis-nous ce qui te plaît et on t'informe sur les horaires d'entrainements." },
                     { step: "2", title: "Essai gratuit", desc: "Viens découvrir ton sport lors d'un ou plusieurs entraînements d'essai, sans engagement." }, 
-                    { step: "3", title: "Inscription finale", desc: "Si ça te plaît, finalise ton inscription et deviens membre des Salamandres !" },
+                    { step: "3", title: "Dossier d'adhésion", desc: "Récupère les documents à compléter auprès de ton référent de section." },
+                    { step: "4", title: "Inscription finale", desc: "Si ça te plaît, finalise ton inscription et deviens membre des Salamandres !" },
                   ].map((item) => (
                     <div key={item.step} className="flex items-start gap-4">
                       <div className="w-10 h-10 bg-packer-gold rounded-full flex items-center justify-center shrink-0">
