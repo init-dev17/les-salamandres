@@ -45,7 +45,7 @@ export function CheerleadingPage() {
       instagramUrl="https://www.instagram.com/reel/DYKwfGFRLsH/"
       location="Gymnases Claude Bernard, Edouard Vaillant & Jules Deschaseaux"
       videoUrl="https://www.youtube.com/watch?v=vnM0F0F4pkQ"
-      videoEnd={113}
+      videoEnd={49}
       galleryImages={[
         "/photos/cheer5.jpg",
         "/photos/cheer.jpg",
