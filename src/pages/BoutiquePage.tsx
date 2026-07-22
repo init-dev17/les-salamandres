@@ -30,8 +30,13 @@ export function BoutiquePage() {
             className="bg-white rounded-2xl p-10 sm:p-14 shadow-sm"
           >
             <ShoppingBag className="w-16 h-16 text-packer-gold mx-auto mb-6" />
+            {/* <img
+                      src="/photos/partenaires/r.avif"
+                      alt="logo raso store"
+                      className=" h-16 text-packer-gold mx-auto mb-6"
+                    /> */}
             <h3 className="font-heading text-3xl sm:text-4xl text-packer-green tracking-wider mb-4">
-              BOUTIQUE OFFICIELLE
+               BOUTIQUE OFFICIELLE {/*RASO STORE */}
             </h3> 
             <a
               href="https://rasostore.fr/collections/salamandres"
