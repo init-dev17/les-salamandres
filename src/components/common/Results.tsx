@@ -151,7 +151,7 @@ export default function AllSheetsTables() {
             <table className="w-full border-collapse text-center">
               <thead>
                 <tr>
-                  {Object.keys(filteredData[0]).map((key) => (
+                  {Object.keys(filteredData[0]).filter((key) => key !== "Saison").map((key) => (
                     <th
                       key={key}
                       className="bg-packer-green-light text-white font-normal text-xs tracking-widest px-4 py-3 text-center"
@@ -167,7 +167,7 @@ export default function AllSheetsTables() {
                     key={rIndex}
                     className={rIndex % 2 === 0 ? "bg-white" : "bg-salamandre-gray"}
                   >
-                    {Object.values(row).map((cell, cIndex) => (
+                    {Object.entries(row).filter(([key]) => key !== "Saison").map(([, cell], cIndex) => (
                       <td key={cIndex} className="px-1 py-2 text-sm border-b border-packer-green/10">
                         {cell}
                       </td>
