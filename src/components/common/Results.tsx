@@ -1,13 +1,10 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import Papa from "papaparse";
 
-// Liste des URLs CSV publiées, une par onglet
-//const SHEET_ID = "2PACX-1vSAeAyNBuZvn7LG_-GNqVS10kmDK0wXstfGqWpHuYXwFW6BonPN7HpeRlRVnn9DFLQeOEAC8_9w6voq";
-
 const SHEET_URLS = [
-  { name: "FootUS U18", url: "https://docs.google.com/spreadsheets/d/e/2PACX-1vSAeAyNBuZvn7LG_-GNqVS10kmDK0wXstfGqWpHuYXwFW6BonPN7HpeRlRVnn9DFLQeOEAC8_9w6voq/pub?gid=0&single=true&output=csv" },
+  { name: "Foot US U18", url: "https://docs.google.com/spreadsheets/d/e/2PACX-1vSAeAyNBuZvn7LG_-GNqVS10kmDK0wXstfGqWpHuYXwFW6BonPN7HpeRlRVnn9DFLQeOEAC8_9w6voq/pub?gid=0&single=true&output=csv" },
   {
-    name: "FootUS Séniors",
+    name: "Foot US Séniors",
     url: "https://docs.google.com/spreadsheets/d/e/2PACX-1vSAeAyNBuZvn7LG_-GNqVS10kmDK0wXstfGqWpHuYXwFW6BonPN7HpeRlRVnn9DFLQeOEAC8_9w6voq/pub?gid=767959993&single=true&output=csv",
   },
   {
@@ -18,7 +15,6 @@ const SHEET_URLS = [
     name: "Flag Séniors",
     url: "https://docs.google.com/spreadsheets/d/e/2PACX-1vSAeAyNBuZvn7LG_-GNqVS10kmDK0wXstfGqWpHuYXwFW6BonPN7HpeRlRVnn9DFLQeOEAC8_9w6voq/pub?gid=1269097111&single=true&output=csv",
   },
-  // ajoute les autres onglets…
 ];
 
 type Row = Record<string, string>;
@@ -34,6 +30,8 @@ export default function AllSheetsTables() {
   const [sheetsData, setSheetsData] = useState<SheetData[]>(
     SHEET_URLS.map((s) => ({ name: s.name, data: [], loading: true, error: null }))
   );
+  const [selectedSheet, setSelectedSheet] = useState(0);
+  const [selectedSeason, setSelectedSeason] = useState("Toutes");
 
   useEffect(() => {
     SHEET_URLS.forEach((sheet, index) => {
@@ -69,39 +67,109 @@ export default function AllSheetsTables() {
     });
   }, []);
 
+  const currentSheet = sheetsData[selectedSheet];
+
+  const seasons = useMemo(() => {
+    if (!currentSheet || currentSheet.data.length === 0) return [];
+    const unique = new Set<string>();
+    for (const row of currentSheet.data) {
+      if (row["Saison"]) unique.add(row["Saison"]);
+    }
+    return Array.from(unique).sort().reverse();
+  }, [currentSheet]);
+
+  const filteredData = useMemo(() => {
+    if (!currentSheet) return [];
+    if (selectedSeason === "Toutes") return currentSheet.data;
+    return currentSheet.data.filter((row) => row["Saison"] === selectedSeason);
+  }, [currentSheet, selectedSeason]);
+
+  const selectClass =
+    "bg-packer-green text-white font-subheading font-bold text-sm tracking-widest uppercase px-4 py-2 cursor-pointer transition-colors hover:bg-packer-green-light";
+
   return (
     <div>
-      {sheetsData.map((sheet, i) => (
-        <section key={i} style={{ marginBottom: "2rem" }}>
-          <h2>{sheet.name}</h2>
+      <div className="flex flex-wrap items-center gap-4 mb-6">
+        <div className="flex flex-col gap-1">
+          <label htmlFor="sheet-select" className="text-xs font-bold uppercase tracking-widest text-packer-green/60">
+            Compétition
+          </label>
+          <select
+            id="sheet-select"
+            className={selectClass}
+            value={selectedSheet}
+            onChange={(e) => {
+              setSelectedSheet(Number(e.target.value));
+              setSelectedSeason("Toutes");
+            }}
+          >
+            {SHEET_URLS.map((sheet, i) => (
+              <option key={i} value={i}>
+                {sheet.name}
+              </option>
+            ))}
+          </select>
+        </div>
 
-          {sheet.loading && <p>Chargement de l’onglet {sheet.name}…</p>}
-          {sheet.error && <p style={{ color: "red" }}>Erreur : {sheet.error}</p>}
-          {!sheet.loading && !sheet.error && sheet.data.length === 0 && (
-            <p>Aucune donnée dans l’onglet {sheet.name}.</p>
-          )}
-          {!sheet.loading && !sheet.error && sheet.data.length > 0 && (
-            <table>
+        <div className="flex flex-col gap-1">
+          <label htmlFor="season-select" className="text-xs font-bold uppercase tracking-widest text-packer-green/60">
+            Saison
+          </label>
+          <select
+            id="season-select"
+            className={selectClass}
+            value={selectedSeason}
+            onChange={(e) => setSelectedSeason(e.target.value)}
+          >
+            <option value="Toutes">Toutes</option>
+            {seasons.map((s) => (
+              <option key={s} value={s}>
+                {s}
+              </option>
+            ))}
+          </select>
+        </div>
+      </div>
+
+      <section>
+        {currentSheet?.loading && <p>Chargement de l'onglet {currentSheet.name}…</p>}
+        {currentSheet?.error && <p className="text-red-600">Erreur : {currentSheet.error}</p>}
+        {!currentSheet?.loading && !currentSheet?.error && filteredData.length === 0 && (
+          <p>Aucune donnée pour cette sélection.</p>
+        )}
+        {!currentSheet?.loading && !currentSheet?.error && filteredData.length > 0 && (
+          <div className="overflow-x-auto">
+            <table className="w-full border-collapse">
               <thead>
                 <tr>
-                  {Object.keys(sheet.data[0]).map((key) => (
-                    <th key={key}>{key}</th>
+                  {Object.keys(filteredData[0]).map((key) => (
+                    <th
+                      key={key}
+                      className="bg-packer-green text-white font-subheading font-bold text-xs tracking-widest uppercase px-4 py-3 text-left"
+                    >
+                      {key}
+                    </th>
                   ))}
                 </tr>
               </thead>
               <tbody>
-                {sheet.data.map((row, rIndex) => (
-                  <tr key={rIndex}>
+                {filteredData.map((row, rIndex) => (
+                  <tr
+                    key={rIndex}
+                    className={rIndex % 2 === 0 ? "bg-white" : "bg-salamandre-gray"}
+                  >
                     {Object.values(row).map((cell, cIndex) => (
-                      <td key={cIndex}>{cell}</td>
+                      <td key={cIndex} className="px-4 py-2 border-b border-packer-green/10">
+                        {cell}
+                      </td>
                     ))}
                   </tr>
                 ))}
               </tbody>
             </table>
-          )}
-        </section>
-      ))}
+          </div>
+        )}
+      </section>
     </div>
   );
 }
