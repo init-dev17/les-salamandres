@@ -98,7 +98,7 @@ export default function AllSheetsTables() {
     "text-black border border-gray-500 font-body font-medium text-sm tracking-wide px-4 py-2 cursor-pointer transition-colors rounded-3xl text-center focus:outline-none ";
 
   return (
-    <div className="p-4 bg-gray-50">
+    <div className="p-4 bg-white">
       <div className="flex flex-wrap items-center gap-4 mb-6">
         <div className="flex flex-col gap-1">
           <label htmlFor="sheet-select" className="text-xs font-bold uppercase tracking-widest text-center text-packer-green/60">
