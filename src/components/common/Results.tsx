@@ -87,7 +87,7 @@ export default function AllSheetsTables() {
   }, [currentSheet, selectedSeason]);
 
   const selectClass =
-    "text-black border border-gray-500 font-body font-medium text-sm tracking-wide px-4 py-2 cursor-pointer transition-colors rounded-3xl text-center focus:outline-none";
+    "text-black border border-gray-500 font-body font-medium text-sm tracking-wide px-4 py-2 cursor-pointer transition-colors rounded-3xl text-center focus:outline-none ";
 
   return (
     <div className="p-4 bg-gray-50">
@@ -106,7 +106,7 @@ export default function AllSheetsTables() {
             }}
           >
             {SHEET_URLS.map((sheet, i) => (
-              <option key={i} value={i} className="bg-gray-100" >
+              <option key={i} value={i} className="bg-gray-50 text-left" >
                 {sheet.name}
               </option>
             ))}
@@ -125,7 +125,7 @@ export default function AllSheetsTables() {
           >
             <option value="Toutes">Toutes</option>
             {seasons.map((s) => (
-              <option key={s} value={s}>
+              <option key={s} value={s} className="bg-gray-50 text-left">
                 {s}
               </option>
             ))}
