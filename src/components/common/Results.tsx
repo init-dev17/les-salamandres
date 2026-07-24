@@ -33,7 +33,7 @@ export default function AllSheetsTables() {
     SHEET_URLS.map((s) => ({ name: s.name, data: [], loading: true, error: null }))
   );
   const [selectedSheet, setSelectedSheet] = useState(0);
-  const [selectedSeason, setSelectedSeason] = useState("Toutes");
+  const [selectedSeason, setSelectedSeason] = useState("");
 
   useEffect(() => {
     SHEET_URLS.forEach((sheet, index) => {
@@ -80,9 +80,17 @@ export default function AllSheetsTables() {
     return Array.from(unique).sort().reverse();
   }, [currentSheet]);
 
+  useEffect(() => {
+    if (seasons.length > 0) {
+      setSelectedSeason(seasons[0]);
+    } else {
+      setSelectedSeason("");
+    }
+  }, [seasons]);
+
   const filteredData = useMemo(() => {
     if (!currentSheet) return [];
-    if (selectedSeason === "Toutes") return currentSheet.data;
+    if (!selectedSeason) return currentSheet.data;
     return currentSheet.data.filter((row) => row["Saison"] === selectedSeason);
   }, [currentSheet, selectedSeason]);
 
@@ -102,7 +110,7 @@ export default function AllSheetsTables() {
             value={selectedSheet}
             onChange={(e) => {
               setSelectedSheet(Number(e.target.value));
-              setSelectedSeason("Toutes");
+              setSelectedSeason("");
             }}
           >
             {SHEET_URLS.map((sheet, i) => (
@@ -123,7 +131,6 @@ export default function AllSheetsTables() {
             value={selectedSeason}
             onChange={(e) => setSelectedSeason(e.target.value)}
           >
-            <option value="Toutes">Toutes</option>
             {seasons.map((s) => (
               <option key={s} value={s} className="bg-gray-50 text-left">
                 {s}
