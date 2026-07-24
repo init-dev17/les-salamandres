@@ -9,7 +9,7 @@ const SHEET_URLS = [
   },
   {
     name: "Flag U17",
-    url: "https://docs.google.com/spreadsheets/d/e/2PACX-1vSAeAyNBuZvn7LG_-GNqVS10kmDK0wXstfGqWpHuYXwFW6BonPN7HpeRlRVnn9DFLQeOEAC8_9w6voq/pubhtml?gid=293425910&single=true",
+    url: "https://docs.google.com/spreadsheets/d/e/2PACX-1vSAeAyNBuZvn7LG_-GNqVS10kmDK0wXstfGqWpHuYXwFW6BonPN7HpeRlRVnn9DFLQeOEAC8_9w6voq/pub?gid=293425910&single=true&output=csv",
   },
   {
     name: "Flag Séniors",
